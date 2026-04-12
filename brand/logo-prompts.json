@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Primary Concept",
+    "prompt": "Design a combination mark logo with icon and text, balanced composition for \"AgencyCyberInsurance\", a finance company. Style: professional trust authority clean. Colors: #1B2A4A. Concept: Shield or lock combined with digital network nodes representing cyber protection. Clean geometric style, works at small sizes. Symbol only, no text.. White background, vector-style, high contrast, scalable design. Professional logo design."
+  },
+  {
+    "name": "Minimal Variant",
+    "prompt": "Minimalist logo for \"AgencyCyberInsurance\" (finance). Ultra-clean, simple geometric shapes, professional trust authority clean feel. White background, single color, works at small sizes. Professional logo design."
+  },
+  {
+    "name": "Bold Variant",
+    "prompt": "Bold, modern logo for \"AgencyCyberInsurance\" (finance). Strong presence, professional trust authority clean aesthetic. Using #1B2A4A. White background, impactful design, memorable silhouette. Professional logo design."
+  },
+  {
+    "name": "Icon Only",
+    "prompt": "Abstract icon/symbol for a finance brand called \"AgencyCyberInsurance\". Mood: professional trust authority clean. Geometric, distinctive, works as app icon or favicon. White background, single shape, professional logo mark."
+  }
+]

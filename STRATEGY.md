@@ -705,3 +705,28 @@ The following data informed the decision to pursue niche affiliate sites over ot
   - No fake identity risk — nothing to expose
   - Scalable — can add real contributors over time
   - Exit-friendly — brand transfers cleanly if site is sold
+
+## Step 3: Brand Identity (Completed)
+- **Date:** 2026-04-12
+- **Logo:** Concept 1 — Shield Network (3D chrome shield with network nodes)
+- **Favicon:** Simplified flat version — navy shield outline with triangle network nodes
+- **Primary Color:** #1B2A4A (Navy)
+- **Analogous-1:** #1B414A (Teal-Navy)
+- **Analogous-2:** #241B4A (Deep Purple)
+- **CTA Accent:** #0D9488 (Teal — kept from scaffold for vibrancy)
+- **Typography:** Inter (heading + body — Modern preset)
+- **Voice:** Authoritative, clear, practical — agency buyer perspective
+- **Tagline:** "Cyber insurance decoded by the agencies who buy it"
+- **Brand Guide:** `/brand/brand-guide.md`
+- **Favicon Set:** 16, 32, 48, 180, 192, 512px + ICO in `/public/`
+- **OG Image:** `/public/og-image.png` (1200×630px, shield on navy)
+
+### Brand Assets
+| Asset | Path |
+|-------|------|
+| Full logo (premium) | `/brand/logos/concept-1-shield-network.png` |
+| Favicon source | `/brand/logos/concept-1-favicon_0.jpg` |
+| Header icon | `/public/logo-icon.png` |
+| OG image | `/public/og-image.png` |
+| Color tokens | `/brand/tailwind-colors.json`, `/brand/palette.css` |
+| Brand guide | `/brand/brand-guide.md` |

@@ -730,3 +730,19 @@ The following data informed the decision to pursue niche affiliate sites over ot
 | OG image | `/public/og-image.png` |
 | Color tokens | `/brand/tailwind-colors.json`, `/brand/palette.css` |
 | Brand guide | `/brand/brand-guide.md` |
+
+
+## Step 4: Deploy to Vercel + Connect Domain
+- **Status:** In Progress
+- **Date:** 2026-04-12
+- **GitHub Repo:** https://github.com/kembah17/agency-cyber-insurance
+- **Domain:** agencycyberinsurance.com (purchased on Namecheap)
+- **Deployment Platform:** Vercel
+
+### Deployment Checklist
+- [x] GitHub repository created and code pushed
+- [x] Import project on Vercel
+- [x] Add custom domain on Vercel
+- [x] Configure Namecheap DNS records
+- [x] Verify SSL certificate active
+- [x] Verify site loads on custom domain

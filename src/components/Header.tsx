@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Blog", href: "/blog" },
   { label: "Compare", href: "/compare" },
+  { label: "Free Tool", href: "/tools/recommendation-engine" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

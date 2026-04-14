@@ -3,6 +3,7 @@ import BreadcrumbNav from "@/components/BreadcrumbNav";
 import JsonLd from "@/components/JsonLd";
 import { getBreadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = createMetadata({
   title: "About Us",
@@ -36,6 +37,17 @@ export default function AboutPage() {
               time-consuming process of finding the right cyber liability
               insurance for our own business.
             </p>
+
+            <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden my-8">
+              <Image
+                src="/images/about-team.jpg"
+                alt="The AgencyCyberInsurance team collaborating in a modern office"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+                priority
+              />
+            </div>
 
             <h2>Why We Built This Resource</h2>
             <p>

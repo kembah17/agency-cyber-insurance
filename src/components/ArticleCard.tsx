@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArticleMeta } from "@/lib/types";
 
 interface ArticleCardProps {
@@ -19,25 +20,35 @@ export default function ArticleCard({ article, featured = false }: ArticleCardPr
         featured ? "md:flex" : ""
       }`}
     >
-      {/* Thumbnail placeholder */}
+      {/* Thumbnail */}
       <div
-        className={`bg-warm-gray-lighter flex items-center justify-center ${
+        className={`relative bg-warm-gray-lighter flex items-center justify-center ${
           featured ? "md:w-2/5 h-48 md:h-auto" : "h-48"
         }`}
       >
-        <svg
-          className="w-12 h-12 text-warm-gray-light"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={1}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+        {article.featured_image ? (
+          <Image
+            src={article.featured_image}
+            alt={article.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes={featured ? "(max-width: 768px) 100vw, 40vw" : "(max-width: 768px) 100vw, 33vw"}
           />
-        </svg>
+        ) : (
+          <svg
+            className="w-12 h-12 text-warm-gray-light"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+            />
+          </svg>
+        )}
       </div>
 
       {/* Content */}

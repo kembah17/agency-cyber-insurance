@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { Metadata } from "next";
 import {
   getPostBySlug,
@@ -147,6 +148,20 @@ export default async function BlogPostPage({ params }: PageProps) {
             )}
           </div>
         </header>
+
+        {/* Featured Image */}
+        {post.meta.featured_image && (
+          <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden mb-8 max-w-3xl">
+            <Image
+              src={post.meta.featured_image}
+              alt={post.meta.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              priority
+            />
+          </div>
+        )}
 
         {/* Affiliate Disclosure */}
         {hasAffiliateLinks && (

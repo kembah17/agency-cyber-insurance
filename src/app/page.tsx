@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts, getFeaturedPosts } from "@/lib/content";
 import { getAllProviders } from "@/lib/affiliates";
 import ArticleCard from "@/components/ArticleCard";
@@ -21,8 +22,17 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-navy text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <section className="relative bg-navy text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+          <Image
+            src="/images/hero-main.jpg"
+            alt="Digital agency team collaborating"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm text-gray-300 mb-6">
               <svg
@@ -98,6 +108,32 @@ export default function HomePage() {
                 <div className="text-sm text-warm-gray mt-1">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Free Tool CTA */}
+      <section className="py-12 bg-gradient-to-r from-navy to-teal-navy">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-1 text-white">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                Not Sure Which Policy Is Right for You?
+              </h2>
+              <p className="text-gray-300 leading-relaxed">
+                Our free recommendation engine analyzes your agency profile and
+                matches you with the best cyber insurance provider in under 2 minutes.
+              </p>
+            </div>
+            <Link
+              href="/tools/recommendation-engine"
+              className="inline-flex items-center px-8 py-4 bg-white text-navy font-bold rounded-lg hover:bg-gray-100 transition-colors shrink-0"
+            >
+              Try the Free Tool
+              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

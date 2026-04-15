@@ -16,7 +16,9 @@ export const metadata = createMetadata({
 
 export default function HomePage() {
   const featuredPosts = getFeaturedPosts(3);
-  const recentPosts = getAllPosts().slice(0, 6);
+  const allPosts = getAllPosts();
+  const featuredSlugs = new Set(featuredPosts.map((p) => p.slug));
+  const recentPosts = allPosts.filter((p) => !featuredSlugs.has(p.slug)).slice(0, 3);
   const providers = getAllProviders().slice(0, 3);
 
   return (
@@ -55,9 +57,9 @@ export default function HomePage() {
               <span className="text-teal">Cyber Threats</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-              We’re a digital agency that spent months researching cyber liability
-              insurance. Now we share everything we learned—honest comparisons,
-              real costs, and practical guidance—so you don’t have to start from
+              We&apos;re a digital agency that spent months researching cyber liability
+              insurance. Now we share everything we learned&mdash;honest comparisons,
+              real costs, and practical guidance&mdash;so you don&apos;t have to start from
               scratch.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -93,8 +95,8 @@ export default function HomePage() {
 
       {/* Trust Signals */}
       <section className="border-b border-gray-200 bg-warm-gray-lightest">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { value: "50+", label: "Policies Reviewed" },
               { value: "4", label: "Top Providers Compared" },
@@ -113,11 +115,11 @@ export default function HomePage() {
       </section>
 
       {/* Free Tool CTA */}
-      <section className="py-12 bg-gradient-to-r from-navy to-teal-navy">
+      <section className="py-10 bg-gradient-to-r from-navy to-teal-navy">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1 text-white">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
                 Not Sure Which Policy Is Right for You?
               </h2>
               <p className="text-gray-300 leading-relaxed">
@@ -139,14 +141,14 @@ export default function HomePage() {
       </section>
 
       {/* Top Providers Quick Look */}
-      <section className="py-16">
+      <section className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-navy mb-3">
               Top Cyber Insurance Providers for Agencies
             </h2>
             <p className="text-warm-gray max-w-2xl mx-auto">
-              We’ve researched and compared the leading cyber liability insurance
+              We&apos;ve researched and compared the leading cyber liability insurance
               providers. Here are our top picks for digital agencies.
             </p>
           </div>
@@ -214,27 +216,27 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-6">
             <Link
               href="/compare"
               className="text-teal font-medium hover:text-teal-dark transition-colors"
             >
-              View full comparison →
+              View full comparison &rarr;
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Featured / Recent Articles */}
-      <section className="py-16 bg-warm-gray-lightest">
+      {/* Featured Articles */}
+      <section className="py-12 bg-warm-gray-lightest">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4">
-              Latest Guides &amp; Insights
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-navy mb-3">
+              Essential Guides
             </h2>
             <p className="text-warm-gray max-w-2xl mx-auto">
-              Practical, research-backed articles to help you understand cyber
-              liability insurance and protect your digital agency.
+              Start here. Our most comprehensive guides covering costs, coverage,
+              and everything you need to know about cyber insurance.
             </p>
           </div>
 
@@ -244,55 +246,46 @@ export default function HomePage() {
                 <ArticleCard key={post.slug} article={post} />
               ))}
             </div>
-          ) : recentPosts.length > 0 ? (
+          ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {recentPosts.map((post) => (
+              {allPosts.slice(0, 3).map((post) => (
                 <ArticleCard key={post.slug} article={post} />
               ))}
-            </div>
-          ) : (
-            <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
-              <svg
-                className="w-12 h-12 text-warm-gray-light mx-auto mb-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-                />
-              </svg>
-              <h3 className="text-lg font-semibold text-navy mb-2">
-                Articles Coming Soon
-              </h3>
-              <p className="text-warm-gray text-sm">
-                We’re working on comprehensive guides about cyber insurance for
-                agencies.
-              </p>
-            </div>
-          )}
-
-          {(featuredPosts.length > 0 || recentPosts.length > 0) && (
-            <div className="text-center mt-8">
-              <Link
-                href="/blog"
-                className="inline-flex items-center px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy-light transition-colors"
-              >
-                View All Articles
-              </Link>
             </div>
           )}
         </div>
       </section>
 
+      {/* Recent Articles */}
+      {recentPosts.length > 0 && (
+        <section className="py-12">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-2xl font-bold text-navy">
+                Latest Insights
+              </h2>
+              <Link
+                href="/blog"
+                className="text-teal font-medium hover:text-teal-dark transition-colors text-sm"
+              >
+                View all articles &rarr;
+              </Link>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {recentPosts.map((post) => (
+                <ArticleCard key={post.slug} article={post} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* How We Work */}
-      <section className="py-16">
+      <section className="py-12 bg-warm-gray-lightest">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-navy mb-3">
               How We Research &amp; Compare
             </h2>
             <p className="text-warm-gray max-w-2xl mx-auto">
@@ -323,9 +316,9 @@ export default function HomePage() {
               },
             ].map((item) => (
               <div key={item.title} className="text-center">
-                <div className="w-14 h-14 bg-teal/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-teal/10 rounded-xl flex items-center justify-center mx-auto mb-3">
                   <svg
-                    className="w-7 h-7 text-teal"
+                    className="w-6 h-6 text-teal"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -348,19 +341,19 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-6">
             <Link
               href="/methodology"
               className="text-teal font-medium hover:text-teal-dark transition-colors"
             >
-              Learn about our methodology →
+              Learn about our methodology &rarr;
             </Link>
           </div>
         </div>
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 bg-warm-gray-lightest">
+      <section className="py-12">
         <div className="max-w-xl mx-auto px-4 sm:px-6">
           <NewsletterSignup />
         </div>

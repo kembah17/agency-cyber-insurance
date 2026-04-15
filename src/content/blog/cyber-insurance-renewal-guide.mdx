@@ -1,0 +1,378 @@
+---
+title: "Cyber Insurance Renewal Guide: How to Negotiate Better Terms"
+description: "Learn when to start your cyber insurance renewal, how to negotiate better premiums, avoid coverage gaps, and decide whether to switch providers."
+date: "2025-04-15"
+author: "Agency Cyber Insurance Team"
+category: "Guides"
+tags: ["cyber insurance renewal", "negotiation", "premium reduction", "coverage gaps", "switching providers", "annual review"]
+seo_title: "Cyber Insurance Renewal Guide: How to Negotiate Better Terms | Agency Cyber Insurance"
+seo_description: "Complete cyber insurance renewal guide for digital agencies. Learn when to start (120 days out), negotiation tactics, switching providers, and avoiding coverage gaps."
+faq:
+  - q: "When should I start my cyber insurance renewal process?"
+    a: "Start 120 days before your policy expires. This gives you time to gather documentation, address security gaps, get competing quotes, and negotiate without time pressure."
+  - q: "Can I switch cyber insurance providers mid-term?"
+    a: "You can switch at renewal, but mid-term cancellation is rare and may incur penalties. Most agencies switch at renewal to avoid coverage gaps and take advantage of competitive quotes."
+  - q: "What happens if there is a gap between my old and new cyber insurance policies?"
+    a: "Coverage gaps can leave incidents uninsured. Since most cyber policies are claims-made, an incident discovered during a gap period may not be covered by either policy. Ensure your new policy retroactive date matches your old policy expiration."
+  - q: "How much can I save by negotiating my cyber insurance renewal?"
+    a: "Agencies that document security improvements and shop multiple carriers typically save 15-30 percent at renewal. Implementing MFA, EDR, and immutable backups can reduce premiums by 30-40 percent combined."
+  - q: "Will filing a claim increase my renewal premium?"
+    a: "A clean claim with no disputes typically increases premiums 5-15 percent. Disputed or denied claims can trigger 25-50 percent increases. Documenting remediation steps after a claim helps minimize the impact."
+  - q: "What security improvements have the biggest impact on renewal pricing?"
+    a: "Multi-Factor Authentication reduces premiums 10-15 percent, Endpoint Detection and Response saves 8-12 percent, and immutable backups following the 3-2-1-1 standard can reduce premiums 12-20 percent."
+  - q: "Should I increase my deductible to lower my renewal premium?"
+    a: "Moving from a 5,000 dollar to a 15,000 dollar deductible typically saves 15-20 percent on premiums. Only do this if your agency has cash reserves to absorb the higher out-of-pocket cost if a claim occurs."
+  - q: "What documents do I need for a smooth cyber insurance renewal?"
+    a: "Prepare MFA deployment reports, EDR console status, backup test results, vulnerability scan reports, employee training records, incident response plan, loss history, and any new certifications like SOC 2 or ISO 27001."
+---
+
+import { defined } from 'astro:content';
+
+# Cyber Insurance Renewal Guide: How to Negotiate Better Terms
+
+When our agency received our first cyber insurance renewal quote two years ago, we nearly fell out of our chairs. The premium had jumped almost 30 percent from the previous year, the ransomware sublimit had been cut in half, and there was a new coinsurance clause we had never seen before. After some panicked phone calls to our broker and a deep dive into what was driving the increase, we realized something important: renewal is not a passive process where you simply accept whatever the insurer sends you. It is a negotiation, and agencies that prepare early and document their security improvements walk away with dramatically better terms.
+
+This guide walks through everything we learned about the cyber insurance renewal process, from the ideal timeline to start preparing, through negotiation tactics that actually work, to the tricky business of switching providers without creating dangerous coverage gaps. Whether your renewal is months away or just around the corner, these strategies can help your agency secure better coverage at a lower price.
+
+## Why Renewal Is the Most Important Moment in Your Insurance Cycle
+
+Most digital agency owners think about cyber insurance twice: when they first buy a policy and when a claim happens. But the renewal window is arguably the most consequential moment in your entire insurance relationship. It is the one time each year when you have genuine leverage to reshape your coverage, adjust your premiums, and address gaps that may have developed as your agency grew.
+
+During the initial purchase, you are an unknown quantity to the insurer. They are pricing based on your application answers and whatever external data they can gather. But at renewal, you have a track record. If you maintained clean claims history, implemented new security controls, or earned certifications during the policy period, that track record becomes your strongest negotiating asset.
+
+The renewal window is also when coverage gaps are most likely to appear. If your agency added new services, expanded into new markets, or significantly grew your client base during the policy year, your existing coverage may no longer match your actual risk profile. Sublimits that seemed adequate when you had ten clients may be dangerously low now that you manage thirty. Business interruption coverage designed for a five-person team may not protect a twenty-person operation.
+
+Understanding that renewal is an active process rather than a rubber-stamp exercise is the first step toward getting better terms. The agencies that treat renewal as a strategic opportunity consistently pay less and get more comprehensive coverage than those who simply sign whatever arrives in their inbox.
+
+## The 120-Day Renewal Timeline: When to Start and What to Do
+
+The single most important piece of advice we can offer about cyber insurance renewal is this: start 120 days before your policy expires (Source: Marsh Cyber Insurance Renewal Best Practices, 2025). That four-month runway gives you enough time to gather documentation, address security gaps, get competing quotes, and negotiate without the pressure of an approaching deadline.
+
+Here is how we break down the 120-day timeline into four phases, each with specific objectives.
+
+### Days 120 to 90: Assemble Your Renewal Team
+
+The first phase is about getting organized. Pull together the people who will contribute to the renewal process. For most digital agencies, this means your IT lead or managed service provider, someone from finance who understands the budget implications, and whoever manages your broker relationship.
+
+During this phase, you should request your current policy documents and review them carefully. Look at your coverage limits, sublimits, deductibles, exclusions, and any endorsements that were added during the policy term. Create a single shared folder where all renewal documentation will live. This becomes your evidence repository.
+
+You should also request your loss run report from your current carrier. This document shows your claims history over the past three to five years and is one of the first things a new carrier will ask for if you decide to shop your renewal. Having it ready saves time later.
+
+### Days 90 to 60: Conduct Your Mock Underwriting Review
+
+This is the phase that separates agencies who get great renewal terms from those who accept whatever they are offered. Take your previous year's application and answer every question as if an underwriter will scrutinize each response. For every answer, ask yourself: what proof would make this answer credible?
+
+For example, if you plan to answer "yes" when asked whether Multi-Factor Authentication (MFA) is deployed across all email and remote access, you need to be able to produce a screenshot from your MFA management console showing enforcement status. If you will claim that your backups follow the 3-2-1-1 standard, meaning three copies of data on two different media types with one copy offsite and one copy immutable, you need documentation of your backup architecture and your most recent successful restore test.
+
+This mock underwriting exercise almost always reveals gaps between what agencies believe about their security posture and what they can actually prove. We discovered during our own mock review that our Endpoint Detection and Response (EDR) solution was deployed on only 80 percent of our endpoints because several contractors were using personal devices without the agent installed. Finding that gap at day 75 gave us time to fix it before the actual underwriting review.
+
+If you need help understanding what controls insurers look for, our [cyber insurance application checklist](/blog/cyber-insurance-application-checklist) walks through every question you are likely to encounter.
+
+### Days 60 to 30: Validate Controls and Compile Evidence
+
+With your mock review complete and any gaps identified, this phase focuses on fixing issues and gathering hard evidence. Export configuration reports from your security tools:
+
+- **MFA status reports** showing enforcement across email, VPN, and privileged accounts
+- **EDR console exports** confirming all endpoints are reporting with current signatures
+- **Backup restoration test results** with dates and success confirmation
+- **Vulnerability scan reports** from the past 30 days
+- **Phishing simulation results** showing employee click rates
+- **Security awareness training completion records** showing at least 90 percent completion
+
+This is also when you should compile any certifications or audit reports earned during the policy year. If your agency completed a SOC 2 Type II audit, achieved ISO 27001 certification, or conducted a formal penetration test, these documents carry significant weight with underwriters. SOC 2 Type II certification alone can support a 10 to 20 percent premium reduction because it provides independent verification that your security controls actually work over time (Source: Deloitte Cyber Insurance Underwriting Trends, 2025).
+
+### Days 30 to 0: Negotiate, Compare, and Confirm
+
+The final phase is where the actual negotiation happens. By now, you should have your renewal quote from your current carrier, competing quotes from at least two alternative carriers, and a comprehensive evidence package documenting your security posture.
+
+Compare quotes not just on premium price but on the full picture: retentions, coinsurance requirements, ransomware sublimits, coverage exclusions, business interruption waiting periods, and requirements about using specific vendors during incident response. A policy that costs 10 percent less but includes a 50 percent ransomware coinsurance clause may actually leave you worse off than the more expensive option.
+
+We will dig deeper into specific negotiation tactics in the next section, but the key principle is this: never negotiate from a position of desperation. Starting at day 30 with no alternatives gives your current carrier all the leverage. Starting at day 30 with two competing quotes and a stack of security documentation gives you the leverage.
+
+The 120-day timeline requires discipline, but it pays for itself many times over. Agencies that follow this structured approach consistently report better renewal outcomes than those who start the process in the final weeks before expiration.
+
+## Five Negotiation Tactics That Actually Lower Your Renewal Premium
+
+Negotiating cyber insurance is not like haggling at a flea market. Insurers use sophisticated risk models to price coverage, and simply asking for a lower number without supporting evidence rarely works. But there are specific tactics that demonstrably influence renewal pricing because they change how the underwriter assesses your risk.
+
+### Tactic 1: Document Every Security Improvement Made During the Policy Year
+
+The most powerful negotiation tool is evidence that your agency is a better risk today than it was when the policy was written. If you implemented MFA during the policy year, that single control can justify a 10 to 15 percent premium reduction (Source: Coalition Cyber Insurance Claims Report, 2024). If you deployed EDR across all endpoints, that supports an additional 8 to 12 percent reduction. Immutable backups following the 3-2-1-1 standard can reduce premiums by 12 to 20 percent because they fundamentally change your ransomware risk profile.
+
+The key is presenting these improvements proactively rather than waiting for the underwriter to ask. Compile a one-page summary of security improvements with dates, evidence, and the specific risk each improvement addresses. Hand this to your broker before the renewal quote is generated, not after.
+
+When our agency presented documentation showing we had implemented MFA, deployed EDR, and completed SOC 2 Type II certification during the policy year, our renewal quote came back 28 percent lower than the previous year. The underwriter told our broker that the security improvement trajectory was the primary factor in the pricing decision.
+
+For a detailed breakdown of which controls have the biggest premium impact, see our guide on [how to reduce cyber insurance premiums](/blog/how-to-reduce-cyber-insurance-premiums).
+
+### Tactic 2: Get Competing Quotes from Multiple Carriers
+
+The cyber insurance market in 2025 and 2026 is competitive, with more than eleven consecutive quarters of rate decreases across the industry (Source: Howden Cyber Insurance Market Report, 2025). Multiple carriers are actively bidding for mid-sized digital agency business, which means your current carrier is not the only option.
+
+Getting quotes from two or three alternative carriers accomplishes two things. First, it establishes market pricing so you know whether your renewal quote is competitive. Second, it gives you concrete leverage to negotiate with your incumbent. Many carriers will match or beat competing quotes if the account represents good loss history and reasonable security controls.
+
+When shopping, consider both traditional carriers and technology-forward insurers. Companies like Coalition and At-Bay offer integrated security monitoring alongside coverage, which may provide better overall value even if the premium is slightly higher. Our [comparison of the best cyber insurance providers for digital agencies](/compare/best-cyber-insurance-digital-agencies) can help you identify which carriers to approach.
+
+### Tactic 3: Optimize Your Deductible and Retention Structure
+
+Many agencies accept the default deductible without realizing how much premium savings a higher deductible can unlock. Moving from a 5,000 dollar deductible to a 15,000 dollar deductible typically reduces your annual premium by 15 to 20 percent (Source: Marsh Cyber Insurance Benchmarking Report, 2025). For an agency paying 20,000 dollars annually, that is 3,000 to 4,000 dollars in savings every year.
+
+The math only works if your agency has the cash reserves to absorb the higher out-of-pocket cost when a claim occurs. For most mid-sized agencies with revenue between 5 million and 50 million dollars, a 10,000 dollar deductible represents a reasonable balance between premium savings and financial protection.
+
+Some brokers recommend a layered retention strategy where different deductible levels apply to different coverage categories. You might accept a 15,000 dollar retention on data breach and privacy liability, where claims are more predictable, but maintain a 5,000 dollar retention on business interruption, where claims are less predictable and potentially larger. This approach lets you optimize each coverage category based on its specific risk characteristics.
+
+### Tactic 4: Bundle Cyber with Technology Errors and Omissions Coverage
+
+Digital marketing agencies face both cyber risks and professional liability risks, and these two categories overlap significantly. When a configuration error causes a client's advertising account to go dark for several days, that is a professional liability issue. When a credential compromise leads to unauthorized changes in a client's campaign, that is a cyber issue. Often, a single incident triggers both.
+
+Bundling cyber insurance with Technology Errors and Omissions (E&O) coverage through a single carrier typically costs 15 to 25 percent less than purchasing the same coverage separately (Source: Embroker Digital Agency Insurance Guide, 2025). The savings come from the carrier managing both coverages under a single underwriting and claims process, reducing administrative overhead.
+
+For most digital marketing agencies, a bundled cyber plus tech E&O program represents the optimal coverage structure. It eliminates the risk of coverage disputes between two separate carriers arguing over which policy should respond to a given incident.
+
+### Tactic 5: Leverage Your Claims History Strategically
+
+If your agency has maintained a clean claims history for two or more years, that track record has real value in renewal negotiations. Agencies with no claims typically receive flat renewals or modest decreases in the current market environment. But you need to explicitly highlight this track record rather than assuming the underwriter will notice.
+
+Conversely, if your agency did file a claim during the policy year, the remediation steps you took afterward matter enormously. An agency that suffered a ransomware attack but subsequently implemented immutable backups, EDR, and network segmentation demonstrates learning and proactive risk reduction. Underwriters explicitly consider post-incident improvements when setting renewal terms (Source: Beazley Cyber Insurance Underwriting Guidelines, 2025). By contrast, an agency that suffered an identical attack due to identical control gaps, suggesting nothing was learned, faces much more severe renewal penalties.
+
+Organizations with clean claims history typically face 5 to 15 percent premium increases at renewal in the current market, while those with disputed or denied claims can see increases of 25 to 50 percent. Documenting what you learned and what you changed after any incident is essential for managing renewal pricing.
+
+These five tactics work best in combination. An agency that documents security improvements, shops multiple carriers, optimizes its deductible, bundles coverage, and leverages its claims history can realistically achieve 20 to 35 percent savings compared to passively accepting a renewal quote.
+
+## Understanding Coverage Gaps: The Hidden Risk When Switching Providers
+
+Switching cyber insurance carriers can save money and improve coverage, but it introduces a risk that many agencies overlook: the coverage gap. Understanding how gaps occur and how to prevent them is essential for any agency considering a carrier change.
+
+### How Claims-Made Policies Create Gap Risk
+
+Most cyber insurance is written on a "claims-made" basis, which means coverage applies to incidents reported to the carrier during the policy term, regardless of when the incident actually occurred, subject to a retroactive date limitation (Source: International Risk Management Institute, 2025). This is fundamentally different from "occurrence" policies used in general liability, where coverage applies based on when the incident happened.
+
+The retroactive date is the key concept. It establishes the earliest date from which incidents are covered. If your policy has a retroactive date of January 1, 2024, then any incident that occurred on or after that date and is reported during the policy term is potentially covered. Incidents that occurred before the retroactive date are not covered, even if they are discovered during the policy term.
+
+Here is where the gap risk emerges. Suppose your current policy expires December 31, 2025, with a retroactive date of January 1, 2023. You switch to a new carrier whose policy begins January 1, 2026, but the new carrier sets a retroactive date of January 1, 2026, covering only incidents occurring from that date forward. Now imagine a data breach that actually occurred on November 15, 2025, but is not discovered until February 2026. Your old policy has expired, so you cannot report the claim. Your new policy has a retroactive date of January 1, 2026, so the November 2025 incident falls outside its coverage window. You are uninsured for a breach that occurred while you were paying premiums.
+
+### How to Prevent Coverage Gaps
+
+The solution is straightforward but requires explicit attention during the switching process. When negotiating with a new carrier, insist that the new policy's retroactive date matches your old policy's retroactive date, not the new policy's inception date. In the example above, the new policy should have a retroactive date of January 1, 2023, matching the old policy, creating seamless continuation of coverage.
+
+Most carriers will agree to match retroactive dates, especially if you have clean claims history and can demonstrate continuous coverage. However, some carriers may resist if they perceive the prior coverage period as high-risk or if you have undisclosed incidents from that period. This is another reason why maintaining clean, transparent claims history matters.
+
+If the new carrier will not match the retroactive date, you have two options. First, you can purchase an Extended Reporting Period (ERP), sometimes called "tail coverage," from your old carrier. This extends the window during which you can report claims under the old policy, typically for one to three years after expiration. Tail coverage costs additional premium, usually 50 to 200 percent of the final year's premium depending on the extension period, but it eliminates the gap.
+
+Second, you can negotiate a "nose" provision with the new carrier, which extends the retroactive date backward to cover the gap period. This is essentially the same as matching the retroactive date but may be structured differently in the policy language.
+
+The critical point is that coverage gaps do not announce themselves. They only become apparent when you file a claim and discover that neither your old nor your new policy covers the incident. By then, it is too late. Discuss retroactive dates explicitly with your broker before finalizing any carrier switch.
+
+For agencies evaluating whether to switch carriers, our [guide to what cyber insurance covers](/blog/what-cyber-insurance-covers) explains the key policy terms you need to understand before making a decision.
+
+## Mid-Term Policy Changes: When You Cannot Wait for Renewal
+
+Sometimes your agency's risk profile changes significantly during the policy year, and waiting for renewal to adjust coverage creates unacceptable exposure. Common scenarios for digital agencies include acquiring another agency, opening offices in new countries, winning a large client that significantly increases your data handling obligations, or launching new service lines that create different risk profiles.
+
+Rather than waiting for renewal, you can modify coverage mid-term through endorsements. An endorsement is a formal amendment to your existing policy that changes specific terms, limits, or conditions. Mid-term endorsements are processed by your carrier's underwriting team and typically take one to three weeks to finalize.
+
+### Common Mid-Term Endorsements for Digital Agencies
+
+**Increasing coverage limits** is the most common mid-term change. If your agency's revenue grew 50 percent during the policy year, your original coverage limits may no longer be adequate. Increasing from 1 million to 2 million dollars in aggregate coverage mid-term costs additional premium, prorated for the remaining policy period, but ensures you are not underinsured during a period of rapid growth.
+
+**Expanding geographic coverage** becomes necessary when agencies open offices in new countries or begin serving clients in jurisdictions with different data privacy regulations. If your agency starts handling data from European Union residents, you may need coverage that explicitly addresses General Data Protection Regulation (GDPR) compliance costs and regulatory defense.
+
+**Adding coverage for new data types** applies when your agency begins processing categories of data not contemplated in the original policy. If you start managing healthcare client campaigns that involve protected health information, or financial services campaigns involving customer financial data, your coverage may need endorsements addressing these specific data categories.
+
+**Updating vendor lists** matters because many policies require you to disclose critical vendors and may limit coverage if you switch to vendors not disclosed during underwriting. If you change your cloud hosting provider, email platform, or managed security service provider mid-term, notifying your carrier and updating the policy prevents potential coverage disputes.
+
+The cost of mid-term endorsements is typically modest compared to the risk of being underinsured. Discussing potential changes with your broker quarterly costs nothing and often prevents larger problems at renewal.
+
+## Your Annual Coverage Review Checklist
+
+Beyond the formal renewal process, your agency should conduct an annual review of cyber insurance coverage to ensure the program remains adequate as your business evolves. We run through this checklist every quarter, but at minimum, you should complete it annually before starting the renewal process.
+
+### Business Growth and Data Exposure
+
+- Has your agency's revenue grown more than 20 percent since the policy was written?
+- Have you added new clients whose contracts require minimum insurance coverage?
+- Are you handling new categories of data, such as health information, financial data, or children's data?
+- Has your employee count crossed a pricing threshold, such as moving from fewer than 10 to more than 10 employees, or from fewer than 50 to more than 50?
+
+### Coverage Adequacy
+
+- Do your aggregate limits still match your potential maximum loss scenario?
+- Are sublimits for ransomware, funds transfer fraud, and business interruption adequate for your current operations?
+- Does your business interruption waiting period align with how quickly you could realistically resume operations?
+- Are there new exclusions in your policy that were not present in the previous year?
+
+### Security Posture Changes
+
+- Have you implemented new security controls that could support premium reduction?
+- Have any security controls lapsed or been reduced in scope?
+- Have you completed any certifications such as SOC 2 or ISO 27001?
+- Are your phishing simulation click rates below 10 percent?
+- Have all employees completed security awareness training in the past 12 months?
+
+### Regulatory and Market Changes
+
+- Have new state privacy laws taken effect that apply to your agency's data handling?
+- Have client contracts introduced new insurance requirements?
+- Has the cyber insurance market shifted in ways that create opportunities for better terms?
+
+### Vendor and Third-Party Risk
+
+- Have you changed any critical vendors such as cloud providers, email platforms, or managed security services?
+- Have any of your vendors experienced security incidents?
+- Do your vendor contracts include cybersecurity requirements and incident notification obligations?
+
+This checklist serves as the foundation for your renewal preparation. Any "yes" answers to the business growth or coverage adequacy questions should trigger a conversation with your broker about whether mid-term endorsements or renewal adjustments are needed.
+
+## Market Conditions Affecting Your 2025 and 2026 Renewal
+
+Understanding the broader market environment helps you calibrate your expectations and negotiate more effectively. The cyber insurance market in 2025 and 2026 is generally favorable for buyers, but conditions vary based on your agency's specific risk profile.
+
+### The Buyer-Friendly Pricing Environment
+
+Cyber insurance premiums have been declining for more than eleven consecutive quarters as of mid-2025 (Source: Howden Global Cyber Insurance Market Report, 2025). Global pricing declined approximately 7 percent in the fourth quarter of 2025, with declines observed across every region. In the United States specifically, premiums declined about 2.1 percent in the first quarter of 2025, making it the second-largest premium decrease across all property and casualty insurance lines.
+
+This sustained softening represents a dramatic reversal from the hard market of 2021 and 2022, when rate increases exceeded 30 to 40 percent year over year. The current environment means agencies with strong security postures and clean claims histories are in an excellent position to negotiate favorable renewals.
+
+However, the rate of decline is slowing. Industry analysts expect the market to stabilize in late 2025 and early 2026, with modest increases possible for some segments. Agencies that lock in favorable terms now may benefit from doing so before the market turns.
+
+### How Your Risk Profile Affects Your Renewal
+
+Not all agencies experience the same market conditions. The current environment creates three tiers of renewal outcomes:
+
+**Strong security posture with clean claims history:** These agencies receive the most favorable renewals, often with modest rate decreases or flat renewals. If your agency has implemented MFA, EDR, and immutable backups, and has not filed any claims, you are in this tier.
+
+**Average security controls:** Agencies with basic security measures but without comprehensive controls face 5 to 10 percent premium increases, reflecting rising baseline expectations from underwriters (Source: Marsh Cyber Insurance Market Update, Q1 2025).
+
+**Higher-risk profiles or claims history:** Agencies that have filed claims, lack key controls, or operate in high-target segments may face double-digit increases alongside tighter coverage restrictions and potential non-renewal.
+
+Understanding which tier your agency falls into helps you set realistic expectations and focus your preparation efforts on the improvements that will move you into a more favorable tier.
+
+> **Looking for the best renewal terms?** Start by comparing providers. [Coalition](https://coalition.com) offers integrated security monitoring that can strengthen your risk profile before renewal, while [Hiscox](https://hiscox.com) provides competitive pricing for agencies with clean claims history. Our [recommendation engine](/tools/recommendation-engine) can help you identify which carriers are the best fit for your agency's specific situation.
+
+## When to Switch Carriers: Signs It Is Time to Move
+
+Loyalty to your current carrier has some value. Continuous coverage history, established relationships with claims handlers, and familiarity with your policy terms all matter. But there are clear signals that switching carriers may be the right move.
+
+### Red Flags That Suggest Switching
+
+**Premium increases exceeding 15 to 20 percent without corresponding coverage improvements** suggest your carrier is repricing your risk upward, possibly because their portfolio has experienced losses in your industry segment. If competing carriers offer similar coverage at significantly lower premiums, the market is telling you that your current carrier's pricing is out of line.
+
+**Substantially tighter coverage terms at renewal** such as new exclusions, higher sublimits on ransomware, increased coinsurance requirements, or reduced aggregate limits indicate that your carrier is reducing their exposure to your risk category. Even if the premium stays flat, getting less coverage for the same price is effectively a price increase.
+
+**Poor claims experience** during the policy year, such as slow response times, disputes over coverage, or difficulty reaching your claims team, suggests that the carrier may not perform well when you need them most. The value of cyber insurance is realized during a claim, and a carrier that is difficult to work with during a claim is not worth the premium savings.
+
+**Lack of proactive risk management tools** compared to technology-forward carriers like Coalition or At-Bay. If your current carrier provides only passive coverage without security monitoring, vulnerability scanning, or threat intelligence, you may get better overall value from a carrier that helps prevent incidents rather than just paying for them after the fact.
+
+### How to Execute a Smooth Transition
+
+If you decide to switch, follow these steps to ensure continuity:
+
+1. **Confirm retroactive date alignment** with the new carrier before canceling the old policy
+2. **Request your loss run report** from the current carrier to provide to the new carrier
+3. **Review the new policy terms carefully** before binding, paying special attention to exclusions, sublimits, and waiting periods
+4. **Notify your broker** of the switch so they can coordinate timing between the two carriers
+5. **Update your incident response plan** with the new carrier's claims hotline number and panel vendor contacts
+
+The transition should be seamless from a coverage perspective. There should be no day, not even a single hour, where your agency is without active cyber insurance coverage.
+
+> **Considering a switch?** Compare the top providers side by side. [Embroker](https://embroker.com) specializes in tech company coverage with streamlined digital applications, and [At-Bay](https://at-bay.com) combines insurance with active security monitoring. See our [detailed provider comparison](/compare/best-cyber-insurance-digital-agencies) to find the right fit.
+
+## What to Do If Your Carrier Sends a Non-Renewal Notice
+
+Receiving a non-renewal notice is alarming but not catastrophic. Carriers non-renew accounts for various reasons: they may be exiting a market segment, reducing exposure to a specific industry, or responding to claims experience. A non-renewal does not necessarily mean your agency is uninsurable.
+
+If you receive a non-renewal notice, take these steps immediately:
+
+**Contact your broker within 48 hours.** Your broker should begin shopping alternative carriers immediately. The cyber insurance market has enough capacity that most agencies can find replacement coverage, though it may come at a higher premium or with different terms.
+
+**Ask your current carrier for the specific reason.** Understanding why you were non-renewed helps you address the issue. If it is a portfolio-level decision unrelated to your agency, alternative carriers will not penalize you. If it is related to your claims history or security posture, you need to address those issues before approaching new carriers.
+
+**Document your security posture thoroughly.** A comprehensive evidence package showing your current security controls, certifications, and incident response capabilities helps new carriers assess your risk accurately rather than relying on the negative signal of the non-renewal.
+
+**Consider surplus lines carriers.** If standard market carriers decline your application, surplus lines carriers, also known as excess and surplus or E&S carriers, specialize in harder-to-place risks. Premiums are typically higher, but coverage is available for agencies that cannot find standard market options.
+
+Non-renewal is a setback, not a dead end. Agencies that respond quickly and transparently typically find replacement coverage within 30 to 60 days.
+
+## The Renewal Preparation Documentation Checklist
+
+To make your renewal process as smooth as possible, compile these documents before your broker begins the renewal submission. Having everything ready upfront reduces back-and-forth with underwriters and accelerates the quoting process.
+
+### Security Control Documentation
+
+- MFA management console exports showing enforcement status across email, VPN, and privileged accounts
+- EDR console status reports showing all endpoints reporting with current signatures
+- Backup architecture diagrams showing offline or air-gapped storage separation
+- Most recent backup restoration test results with dates
+- Vulnerability scan reports from the past 30 days
+- Patch management reports showing current patch status across critical systems
+- Network diagrams showing data flows and segmentation
+
+### Policy and Procedure Documentation
+
+- Information security policy
+- Incident response plan with most recent tabletop exercise date
+- Data classification and retention policies
+- Vendor risk management procedures
+- Acceptable use policy
+- Business continuity and disaster recovery plan
+
+### Training and Certification Evidence
+
+- Employee security awareness training completion records with at least 90 percent completion rate
+- Phishing simulation results showing click rates below 10 percent
+- SOC 2 Type II report if available
+- ISO 27001 certificate if available
+- Penetration test results from the past 12 months
+
+### Business and Financial Information
+
+- Current employee headcount by role
+- Annual revenue figures
+- Loss run report from current carrier covering the past five years
+- Description of any business changes since last renewal, including new offices, acquisitions, service lines, or major client wins
+- List of critical vendors with their security certifications
+
+### Claims and Incident History
+
+- Description of any cyber incidents during the policy year, even those that did not result in claims
+- Remediation steps taken after any incidents
+- Documentation of any regulatory inquiries or client complaints related to data security
+
+Organizing this documentation in a single shared location before the renewal process begins dramatically reduces the time from submission to quote and demonstrates to underwriters that your agency takes cybersecurity governance seriously.
+
+For a deeper dive into what insurers look for on applications, our [application checklist guide](/blog/cyber-insurance-application-checklist) covers every question you are likely to encounter.
+
+## Putting It All Together: A Chronological Summary of the Renewal Process
+
+Let us walk through the entire renewal process from start to finish, connecting all the pieces we have covered.
+
+**Four months before expiration**, assemble your renewal team and begin gathering documentation. Request your loss run report and current policy documents. Identify any business changes that may affect coverage needs.
+
+**Three months before expiration**, conduct your mock underwriting review. Answer every application question with supporting evidence. Identify gaps between your actual security posture and what you can prove. Begin remediation of any control gaps discovered.
+
+**Two months before expiration**, validate that all security controls are functioning and compile your evidence package. Export reports from MFA, EDR, backup, and vulnerability scanning tools. Gather certifications, training records, and incident response documentation. Begin requesting quotes from alternative carriers.
+
+**One month before expiration**, compare your renewal quote against competing offers. Evaluate not just premium but the full coverage picture including sublimits, exclusions, deductibles, and coinsurance. Present your security improvement documentation to your broker for inclusion in negotiations. If switching carriers, confirm retroactive date alignment.
+
+**Two weeks before expiration**, finalize your decision and bind coverage. Update your incident response plan with the carrier's claims contact information. Confirm that your team knows the notification requirements under the new or renewed policy.
+
+**After renewal**, update your annual review checklist and begin planning for the next renewal cycle. Document any commitments you made to the underwriter about future security improvements, and set calendar reminders to complete those improvements before the next renewal.
+
+The agencies that follow this disciplined approach year after year build a compounding advantage. Each renewal cycle, their security posture improves, their documentation gets stronger, and their negotiating position gets better. Over three to five years, this approach can reduce premiums by 40 to 50 percent compared to agencies that treat renewal as a passive administrative task.
+
+Cyber insurance renewal does not have to be stressful or expensive. With the right preparation, documentation, and negotiation strategy, your agency can secure comprehensive coverage at a fair price while building the security foundation that protects your business, your clients, and your reputation.
+
+## Sources
+
+1. Marsh Cyber Insurance Renewal Best Practices Guide, 2025
+2. Coalition Cyber Insurance Claims Report, 2024
+3. Howden Global Cyber Insurance Market Report, 2025
+4. Deloitte Cyber Insurance Underwriting Trends, 2025
+5. Marsh Cyber Insurance Benchmarking Report, 2025
+6. Embroker Digital Agency Insurance Guide, 2025
+7. Beazley Cyber Insurance Underwriting Guidelines, 2025
+8. International Risk Management Institute (IRMI), Claims-Made Policy Analysis, 2025
+9. Aon Cyber Insurance Market Update, Q1 2025
+10. NetDiligence Cyber Claims Study, 2024
+11. NIST Cybersecurity Framework 2.0, February 2024
+12. IBM Cost of a Data Breach Report, 2024

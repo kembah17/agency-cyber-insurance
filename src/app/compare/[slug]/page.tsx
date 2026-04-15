@@ -18,6 +18,7 @@ import BreadcrumbNav from "@/components/BreadcrumbNav";
 import JsonLd from "@/components/JsonLd";
 import AuthorBox from "@/components/AuthorBox";
 import { TOCItem } from "@/lib/types";
+import ArticleTracker from "@/components/ArticleTracker";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -66,6 +67,7 @@ export default async function ComparisonPage({ params }: PageProps) {
   if (!comparison) notFound();
 
   const tocItems = extractTOC(comparison.content);
+  const wordCount = comparison.content.split(/\s+/).length;
 
   const formattedDate = new Date(comparison.meta.date).toLocaleDateString(
     "en-US",
@@ -106,6 +108,7 @@ export default async function ComparisonPage({ params }: PageProps) {
       )}
 
       <article className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <ArticleTracker slug={slug} category="comparison" wordCount={wordCount} />
         <BreadcrumbNav
           items={[
             { label: "Compare", href: "/compare" },

@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 import { getOrganizationJsonLd, SITE_NAME, SITE_DESCRIPTION, SITE_URL } from "@/lib/metadata";
 
 const inter = Inter({
@@ -32,6 +34,9 @@ export const metadata: Metadata = {
       { rel: "icon", url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
       { rel: "icon", url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
     ],
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
   },
   openGraph: {
     type: "website",
@@ -72,10 +77,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased min-h-screen flex flex-col">
+        <GoogleAnalytics />
         <JsonLd data={getOrganizationJsonLd()} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

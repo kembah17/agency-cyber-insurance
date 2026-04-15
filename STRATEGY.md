@@ -47,6 +47,7 @@ This project builds a niche affiliate website targeting **cyber liability insura
 | Tech stack decision | ✅ Done | Next.js 14+ / Vercel / AI content pipeline / existing Agent Zero skills |
 | Implementation roadmap | ✅ Done | 12-week plan drafted |
 | Strategy document | ✅ Done | This document |
+| Analytics & tracking setup | ✅ Done | GA4, event tracking, cookie consent, Search Console verification |
 
 ### What's Pending ⏳
 
@@ -57,7 +58,6 @@ This project builds a niche affiliate website targeting **cyber liability insura
 | Site scaffold & deployment | 🟡 High | Depends on brand identity |
 | First article batch | 🟡 High | Depends on site scaffold |
 | Affiliate program applications | 🟡 High | Depends on live site with content |
-| Analytics & tracking setup | 🟢 Medium | Depends on deployed site |
 | Email/newsletter system | 🟢 Medium | Can be added post-launch |
 
 ---
@@ -820,7 +820,19 @@ The following data informed the decision to pursue niche affiliate sites over ot
 - [x] Cross-links added from original 7 articles to new 14 articles
 - [x] Build passing with zero errors
 
+### Step 8 — Analytics & Tracking ✅ (Completed 2026-04-15)
+
+**Implemented:**
+- Google Analytics 4 integration via `GoogleAnalytics.tsx` component (reads `NEXT_PUBLIC_GA_MEASUREMENT_ID` env var)
+- Cookie consent banner (`CookieConsent.tsx`) — GA4 only loads after user accepts; preference stored in localStorage
+- Typed analytics helper library (`src/lib/analytics.ts`) with 8 event tracking functions
+- Article engagement tracking (`ArticleTracker.tsx`) — scroll depth milestones (25/50/75/100%), article completion events, read time estimation
+- Enhanced `AffiliateLink.tsx` — now tracks provider, article slug, and link position via GA4
+- Enhanced `RecommendationEngine.tsx` — tracks tool open, step completion, recommendation shown, CTA clicks, and restarts
+- Google Search Console verification meta tag support (`NEXT_PUBLIC_GSC_VERIFICATION` env var)
+- `.env.local.example` template for GA4 and GSC configuration
+- Privacy-first: `anonymize_ip: true`, consent-gated loading, graceful degradation when GA not configured
+
 ### Next Steps
-- Step 8: Analytics & tracking setup (GA4, Search Console)
 - Step 9: Backlink outreach campaign
 - Step 10: Email/newsletter system setup

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AFFILIATE_PROVIDERS, getAffiliateUrl } from "@/lib/affiliates";
+import { trackToolUsage, trackCTAClick } from "@/lib/analytics";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -297,6 +298,11 @@ export default function RecommendationEngine() {
   const [result, setResult] = useState<Recommendation | null>(null);
   const [animating, setAnimating] = useState(false);
 
+  // Track tool opened on mount
+  useEffect(() => {
+    trackToolUsage("recommendation_engine", "opened");
+  }, []);
+
   const update = useCallback(
     <K extends keyof Answers>(key: K, value: Answers[K]) => {
       setAnswers((prev) => ({ ...prev, [key]: value }));
@@ -326,10 +332,14 @@ export default function RecommendationEngine() {
 
   const goNext = () => {
     if (step < 4) {
+      trackToolUsage("recommendation_engine", "step_completed", STEP_TITLES[step]);
       setAnimating(true);
       setTimeout(() => { setStep(step + 1); setAnimating(false); }, 200);
     } else {
-      setResult(computeRecommendation(answers));
+      trackToolUsage("recommendation_engine", "step_completed", STEP_TITLES[step]);
+      const rec = computeRecommendation(answers);
+      setResult(rec);
+      trackToolUsage("recommendation_engine", "recommendation_shown", rec.primary);
     }
   };
 
@@ -341,6 +351,7 @@ export default function RecommendationEngine() {
   };
 
   const restart = () => {
+    trackToolUsage("recommendation_engine", "restarted");
     setStep(0);
     setAnswers(INITIAL_ANSWERS);
     setResult(null);
@@ -419,6 +430,7 @@ export default function RecommendationEngine() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-teal text-white font-semibold rounded-lg hover:bg-teal/90 transition-colors"
+                onClick={() => trackCTAClick("recommendation_primary", primary.cta_text, "recommendation_engine")}
               >
                 {primary.cta_text}
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -449,6 +461,7 @@ export default function RecommendationEngine() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-5 py-2.5 border-2 border-navy text-navy font-semibold rounded-lg hover:bg-navy hover:text-white transition-colors text-sm"
+                onClick={() => trackCTAClick("recommendation_alternative", alt.cta_text, "recommendation_engine")}
               >
                 {alt.cta_text}
               </a>

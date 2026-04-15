@@ -22,6 +22,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import JsonLd from "@/components/JsonLd";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { TOCItem } from "@/lib/types";
+import ArticleTracker from "@/components/ArticleTracker";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -71,6 +72,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
 
   const tocItems = extractTOC(post.content);
+  const wordCount = post.content.split(/\s+/).length;
   const relatedPosts = getRelatedPosts(
     slug,
     post.meta.category,
@@ -114,6 +116,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       )}
 
       <article className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <ArticleTracker slug={slug} category={post.meta.category} wordCount={wordCount} />
         <BreadcrumbNav
           items={[
             { label: "Blog", href: "/blog" },

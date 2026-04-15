@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
+import { trackAffiliateClick } from "@/lib/analytics";
 
 interface AffiliateLinkProps {
   href: string;
@@ -8,6 +9,10 @@ interface AffiliateLinkProps {
   children: ReactNode;
   className?: string;
   source?: string;
+  /** Article slug for tracking context */
+  articleSlug?: string;
+  /** Link position: header, body, footer, sidebar, cta-box, comparison-table */
+  position?: string;
 }
 
 export default function AffiliateLink({
@@ -16,32 +21,29 @@ export default function AffiliateLink({
   children,
   className = "",
   source = "article",
+  articleSlug = "unknown",
+  position = "body",
 }: AffiliateLinkProps) {
   const handleClick = () => {
-    // Track affiliate click
     if (typeof window !== "undefined") {
       try {
+        // Store in localStorage for basic tracking (fallback)
         const event = {
           provider,
           source,
           url: href,
+          articleSlug,
+          position,
           timestamp: new Date().toISOString(),
         };
-        // Store in localStorage for basic tracking
         const clicks = JSON.parse(
           localStorage.getItem("affiliate_clicks") || "[]"
         );
         clicks.push(event);
         localStorage.setItem("affiliate_clicks", JSON.stringify(clicks));
 
-        // If analytics is available, fire event
-        if (typeof window.gtag === "function") {
-          window.gtag("event", "affiliate_click", {
-            event_category: "affiliate",
-            event_label: provider,
-            value: 1,
-          });
-        }
+        // Fire GA4 event via analytics helper
+        trackAffiliateClick(provider, articleSlug, position);
       } catch {
         // Silently fail tracking
       }
@@ -59,11 +61,4 @@ export default function AffiliateLink({
       {children}
     </a>
   );
-}
-
-// Type augmentation for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
 }

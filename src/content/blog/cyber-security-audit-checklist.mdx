@@ -1,0 +1,491 @@
+---
+title: "Cyber Security Audit Checklist for Digital Agencies (Pre-Insurance)"
+description: "Complete security audit checklist for digital agencies preparing for cyber insurance. Covers MFA, EDR, backups, compliance frameworks, and premium reduction strategies."
+date: "2025-04-15"
+author: "Agency Cyber Insurance Team"
+category: "Guides"
+tags: ["security audit", "cyber insurance", "MFA", "EDR", "compliance", "SOC 2", "digital agencies", "pre-insurance checklist"]
+seo_title: "Cyber Security Audit Checklist for Digital Agencies | Agency Cyber Insurance"
+seo_description: "Pre-insurance security audit checklist for digital agencies. Learn which controls reduce premiums by 20-50%, free tools to implement, and how to avoid application denials."
+faq:
+  - q: "What security controls do I need before applying for cyber insurance?"
+    a: "At minimum, you need Multi-Factor Authentication (MFA) on all email, VPN, and privileged accounts; Endpoint Detection and Response (EDR) on all endpoints; immutable backups following the 3-2-1-1 rule; a documented incident response plan; and security awareness training with documented completion rates. Missing MFA alone is the leading cause of application denials."
+  - q: "How much can security controls reduce my cyber insurance premiums?"
+    a: "Organizations implementing comprehensive security controls achieve premium reductions of 20-50%. MFA alone provides 10-15% reduction, EDR adds 15-25%, immutable backups contribute 12-20%, and security awareness training adds 5-8%. Combined, these controls can save a mid-sized agency $7,000-$11,000 annually on premiums."
+  - q: "Do I need SOC 2 certification to get cyber insurance?"
+    a: "SOC 2 certification is not required for basic cyber insurance, but it provides significant advantages. SOC 2 Type II certification typically yields 10-20% premium reductions and dramatically strengthens your application. For agencies handling sensitive client data or serving enterprise clients who require vendor compliance, SOC 2 often pays for itself through insurance savings and competitive differentiation."
+  - q: "What free security tools can my agency use to prepare for a cyber insurance audit?"
+    a: "Several free tools can establish baseline security: Qualys FreeScan for vulnerability scanning, OpenVAS for internal vulnerability management, OWASP ZAP for web application security testing, Prowler for cloud security assessment (AWS, Azure, GCP), and Duo Security Free Edition for two-factor authentication. Microsoft 365 and Google Workspace also include MFA at no extra cost."
+  - q: "What are the most common reasons cyber insurance applications get denied?"
+    a: "The top denial reasons are: missing MFA on email, VPN, and privileged accounts (the single leading cause); lack of EDR on all endpoints; no documented backup testing; absence of a written incident response plan; and outdated or unpatched systems. Nearly one in four claims filed in 2024 was rejected, with 37% of denials stemming from security control non-compliance."
+  - q: "How does my security posture affect cyber insurance pricing?"
+    a: "Security posture directly determines both insurability and premium levels. Organizations with robust controls pay 20-50% less than those without. External security ratings from services like BitSight and SecurityScorecard are increasingly used by underwriters to independently verify your security posture. A poor external rating can trigger premium increases or coverage denial regardless of what you report on your application."
+  - q: "Which compliance framework should my digital agency follow?"
+    a: "For most digital agencies, NIST Cybersecurity Framework 2.0 provides the best starting point because it is free, flexible, and widely recognized by insurers. If you serve enterprise clients, SOC 2 Type II certification provides the strongest insurance and competitive benefits. CIS Critical Security Controls offer a practical, prioritized approach for agencies wanting prescriptive guidance on which controls to implement first."
+  - q: "How often should my agency conduct security assessments?"
+    a: "Best practice is continuous vulnerability scanning with formal assessments at minimum quarterly. External penetration testing should occur annually at minimum, with additional testing after significant infrastructure changes. Phishing simulations should run monthly, and your incident response plan should be tested through tabletop exercises at least annually. Backup restoration should be tested monthly for critical systems."
+---
+
+When our agency started shopping for cyber insurance two years ago, we thought the hard part would be comparing policies and negotiating premiums. We were wrong. The hard part was the application itself, a detailed security questionnaire that exposed every gap in our cybersecurity posture and nearly got our application denied before we even reached the pricing stage.
+
+The modern cyber insurance application is not the simple checkbox form it was five years ago. Today's underwriters ask for specific product names for your endpoint protection, demand evidence of Multi-Factor Authentication (MFA) enforcement across every access point, and want documented proof that your backups can actually be restored. They check your external security rating through services like BitSight and SecurityScorecard before you even submit your application.
+
+After scrambling to remediate gaps and resubmitting our application, we learned a valuable lesson: the time to audit your security posture is before you start the insurance process, not during it. This checklist walks through every control that matters to underwriters, the free and affordable tools you can use to implement them, and exactly how each improvement affects your insurability and premium pricing.
+
+## Why a Pre-Insurance Security Audit Matters More Than Ever
+
+The cyber insurance market has fundamentally changed how it evaluates applicants. What were once considered "best practice" controls are now mandatory prerequisites for coverage. Nearly one in four cyber insurance claims filed in 2024 was rejected for failing to meet coverage requirements, with 37 percent of those denials stemming from security control non-compliance (Source: Cyber Insurance Claims Analysis, 2024).
+
+For digital agencies specifically, the stakes are high. We handle client databases, advertising account credentials, campaign performance data, and sometimes financial information for billing. Insurers know this makes us attractive targets. The global cyber insurance market reached $16.3 billion in 2025, and carriers have used their growing experience with claims data to become far more sophisticated about which controls actually prevent losses and which are just security theater (Source: Global Cyber Insurance Market Report, 2025).
+
+The good news is that the controls insurers require are the same controls that actually protect your agency. Implementing them before your insurance application means you get better coverage at lower premiums while simultaneously reducing your actual risk of a devastating breach. Our [complete guide to cyber insurance for digital agencies](/blog/cyber-insurance-guide-digital-agencies) covers the broader landscape, but this checklist focuses specifically on the security assessment you should complete before engaging with any carrier.
+
+## The Controls That Matter Most: Ranked by Premium Impact
+
+Not all security controls are created equal in the eyes of underwriters. Based on our research and conversations with brokers, here is how controls rank in terms of their impact on both insurability and premium pricing.
+
+### Tier 1: Non-Negotiable Controls (Coverage Denial Without Them)
+
+These controls are so fundamental that missing any one of them can result in outright application denial, regardless of how strong the rest of your security posture looks.
+
+**Multi-Factor Authentication (MFA)** is the single highest-impact security control from an insurance pricing perspective. Carriers view organizations lacking universal MFA deployment as substantially high-risk regardless of other security investments. MFA directly addresses the credential-based attack vector that enables 82 percent of breaches traced to human error (Source: Verizon Data Breach Investigations Report, 2024).
+
+Insurers require MFA implementation across:
+- Email platforms (Microsoft 365, Google Workspace)
+- Remote access mechanisms (VPN, Remote Desktop Protocol)
+- All administrative and privileged accounts
+- Cloud applications containing sensitive data
+- Critical business systems (CRM, accounting, project management)
+
+Organizations deploying MFA using modern, phishing-resistant methods like FIDO2 security keys or Microsoft Authenticator demonstrate superior security posture compared to those using basic SMS-based verification, which is vulnerable to SIM swapping attacks. Many carriers now treat missing MFA as grounds for complete underwriting disqualification, meaning you cannot obtain coverage at any price without it.
+
+**Premium Impact**: 10-15 percent reduction. For an agency paying $25,000 annually, that is $2,500-$3,750 saved.
+
+**Endpoint Detection and Response (EDR)** represents the second tier of non-negotiable controls. Carriers specifically require EDR capabilities rather than legacy antivirus solutions. The distinction matters because EDR provides behavioral monitoring that can detect ransomware activity in its early stages before encryption spreads, while traditional antivirus only catches known malware signatures.
+
+EDR solutions monitor endpoint activity in real-time, identifying anomalous behaviors indicative of ransomware propagation, unauthorized privilege escalation, or lateral movement across network segments. Carriers reward EDR implementation through premium reductions of 15 to 25 percent compared to organizations running only legacy antivirus, recognizing that EDR reduces breach dwell time from industry averages of six to nine months down to days or hours (Source: Industry EDR Effectiveness Data, 2025).
+
+**Premium Impact**: 15-25 percent reduction. For a 50-person agency, EDR costs approximately $3,600-$6,000 annually but saves $3,750-$6,250 in premiums.
+
+**Immutable Backup Architecture** is the third non-negotiable. Insurers recognize that 72 percent of ransomware incidents involve direct threat actor targeting of backup systems (Source: Veeam Ransomware Trends Report, 2024). If your backups can be encrypted alongside your production systems, you have no recovery path other than paying ransom.
+
+Carriers now require the 3-2-1-1 rule: three copies of data, two different media types, one copy offsite, and one copy that is immutable or air-gapped. Immutable backups cannot be modified or deleted for specified retention periods even by administrators, eliminating the threat actor's ability to destroy your recovery capability.
+
+Insurers expect documented evidence of:
+- Regular restoration testing (monthly for critical systems, quarterly minimum for all others)
+- Offline or air-gapped storage separation from production networks
+- Encryption of backup data
+- Clearly documented backup policies and architecture diagrams
+
+**Premium Impact**: 12-20 percent reduction. This control provides one of the highest returns on investment because it fundamentally changes the insurer's risk model.
+
+### Tier 2: Strong Premium Reducers (5-15 Percent Each)
+
+These controls significantly improve your application and reduce premiums, though missing one will not necessarily result in denial.
+
+**Documented Incident Response Plan with Testing**: Organizations with written, tested incident response plans recover faster from incidents and minimize breach severity. Carriers require plans that include preparation, detection and analysis, containment and recovery, and post-incident review phases. Organizations demonstrating tabletop exercise evidence, documented meetings simulating breach scenarios, receive premium recognition of superior operational preparedness.
+
+Organizations without incident response plans typically experience two to three times longer recovery periods compared to organizations with tested plans, directly translating to higher business interruption costs (Source: IBM Cost of a Data Breach Report, 2024).
+
+**Premium Impact**: 5-10 percent reduction.
+
+**Security Awareness Training with Measurable Results**: Carriers no longer accept vague assertions that "employees receive training." They want documented completion rates above 90 percent, phishing simulation results demonstrating click rates below 10 percent, and evidence of remediation for employees who fail simulations.
+
+**Premium Impact**: 5-8 percent reduction.
+
+**Patch Management with Defined SLAs**: Carriers expect documented patch management policies with specific timelines for critical vulnerability remediation, typically 7 to 30 days depending on severity. Outdated or unpatched systems accounted for 22 percent of claim denials in 2024.
+
+**Premium Impact**: 5-10 percent reduction.
+
+**Email Security with Authentication Protocols**: Implementing SPF (Sender Policy Framework), DKIM (DomainKeys Identified Mail), and DMARC (Domain-based Message Authentication, Reporting, and Conformance) prevents spoofing of your email domain. Business Email Compromise (BEC) accounts for 60 percent of all cyber insurance claims, making email security a high-priority control for underwriters (Source: Coalition Cyber Claims Report, 2024).
+
+**Premium Impact**: 3-7 percent reduction.
+
+The combined effect of implementing all Tier 1 and Tier 2 controls can reach 40 to 50 percent in total premium reductions. For a detailed breakdown of premium reduction strategies, see our [guide to reducing cyber insurance premiums](/blog/how-to-reduce-cyber-insurance-premiums).
+
+## Free and Affordable Tools for Each Control Area
+
+One of the biggest misconceptions we encountered when preparing for our insurance application was that implementing proper security controls requires enterprise-level budgets. Many of the tools underwriters expect can be implemented for free or at minimal cost.
+
+### Multi-Factor Authentication Tools
+
+**Free Options**:
+- **Microsoft 365 Built-in MFA**: If your agency already uses Microsoft 365 (and most do), MFA is included in your existing license at no incremental cost. You can enforce MFA across all accounts through the Microsoft Entra ID admin center.
+- **Google Workspace Built-in MFA**: Similarly, Google Workspace includes MFA capabilities in all plans. Enable enforcement through the Admin Console.
+- **Duo Security Free Edition**: Duo offers a free two-factor authentication service for up to 10 users, providing essential strong authentication for small agencies.
+
+**Affordable Options**:
+- **Okta** ($2-$6 per user per month): Enterprise-grade identity management with MFA, single sign-on, and lifecycle management.
+- **FIDO2 Security Keys** ($25-$50 per key): Physical security keys like YubiKey provide phishing-resistant MFA that carriers view as the gold standard.
+
+### Endpoint Detection and Response Tools
+
+**Affordable Options** (EDR requires investment, but costs are modest):
+- **Microsoft Defender for Endpoint Plan 2**: Included in Microsoft 365 E5 licensing. If your agency already pays for E5, you have enterprise-grade EDR at no incremental cost.
+- **ESET PROTECT Enterprise**: Approximately $3-$5 per endpoint per month, providing behavioral detection, threat hunting, and forensic capabilities.
+- **CrowdStrike Falcon Go**: Starting at approximately $5 per endpoint per month for small businesses, offering cloud-native EDR with 24/7 threat monitoring.
+- **SentinelOne Singularity**: Approximately $6-$10 per endpoint per month, with autonomous threat detection and response.
+
+For a 50-person agency, EDR deployment costs approximately $3,600-$6,000 annually, which is typically offset entirely by the 15-25 percent premium reduction it generates.
+
+### Vulnerability Scanning Tools
+
+**Free Options**:
+- **Qualys FreeScan**: Provides comprehensive security assessment including vulnerability detection, malware identification, and SSL/TLS configuration analysis. Limited scans per month but sufficient for initial assessment.
+- **OpenVAS (Greenbone Vulnerability Management)**: Open-source vulnerability management tool for comprehensive internal and external infrastructure scanning. Requires some technical expertise to deploy but provides enterprise-grade scanning capabilities.
+- **OWASP ZAP (Zed Attack Proxy)**: Free web application security scanner particularly valuable for agencies developing custom applications or integrating third-party APIs. Identifies OWASP Top 10 vulnerabilities.
+- **Prowler**: Open-source security tool for AWS, Azure, Google Cloud, and Kubernetes environments. Provides security best practices assessments, audits, and compliance verification for cloud infrastructure.
+
+**Affordable Options**:
+- **Nessus Essentials**: Free for up to 16 IP addresses, providing professional-grade vulnerability scanning.
+- **Tenable.io**: Starting at approximately $2,275 annually for 65 assets, offering continuous vulnerability assessment with cloud-based management.
+
+### Backup Solutions
+
+**Affordable Options with Immutability**:
+- **Veeam Backup Community Edition**: Free for up to 10 workloads, supporting immutable backup to various storage targets.
+- **AWS S3 with Object Lock**: Pay-per-use cloud storage with built-in immutability. For most agencies, costs are under $100 per month for critical data backup.
+- **Azure Blob Storage with Immutable Storage**: Similar to AWS, providing WORM (Write Once, Read Many) storage at cloud-scale pricing.
+- **Backblaze B2**: Starting at $6 per TB per month with Object Lock support for immutable backups.
+
+### Security Awareness Training
+
+**Free and Affordable Options**:
+- **KnowBe4 Free Tools**: Offers a free phishing security test and several free training modules.
+- **Proofpoint Security Awareness (formerly Wombat)**: Starting at approximately $1-$3 per user per month.
+- **SANS Security Awareness**: Approximately $2-$4 per user per month with comprehensive training library and phishing simulations.
+- **Google Phishing Quiz**: Free tool for basic phishing awareness, though not sufficient as a standalone training program.
+
+### Password Management
+
+**Affordable Options**:
+- **Bitwarden Teams**: $4 per user per month with enterprise features including shared vaults and policy enforcement.
+- **1Password Business**: $7.99 per user per month with advanced security features and admin controls.
+
+These tools eliminate the excuse that security is too expensive for small agencies. A 20-person agency can implement MFA (free with existing Microsoft 365), basic vulnerability scanning (free with Qualys FreeScan), and password management (approximately $80 per month with Bitwarden) for under $1,000 annually while achieving meaningful premium reductions.
+
+## Compliance Frameworks: Which Ones Matter for Insurance
+
+Underwriters increasingly accept evidence of compliance framework alignment as baseline indicators of security maturity. But not all frameworks carry equal weight, and the right choice depends on your agency's size, client base, and budget.
+
+### NIST Cybersecurity Framework 2.0: The Universal Starting Point
+
+Released in February 2024, the NIST Cybersecurity Framework (CSF) version 2.0 provides guidance for managing cybersecurity risks through six core functions: Govern, Identify, Protect, Detect, Respond, and Recover (Source: NIST CSF 2.0, February 2024). The Govern function, new in version 2.0, addresses organizational context, cybersecurity strategy, supply chain risk management, roles and responsibilities, and oversight.
+
+For digital agencies, NIST CSF 2.0 is the ideal starting point because:
+- It is completely free to implement with no certification or audit costs
+- It is widely recognized by insurers as evidence of systematic cybersecurity governance
+- It is flexible enough to scale from a 5-person boutique to a 500-person enterprise
+- NIST provides free online resources and interactive guides for self-assessment
+
+Organizations demonstrating NIST CSF alignment often receive 5 to 10 percent premium reductions even without formal certification, because they demonstrate understanding of structured, evidence-based security development.
+
+### CIS Critical Security Controls: The Practical Playbook
+
+The Center for Internet Security (CIS) Controls comprise 18 overarching control families offering prioritized, prescriptive best practices. Unlike NIST CSF, which provides a conceptual framework, CIS Controls tell you exactly what to implement and in what order.
+
+The CIS Controls prioritize activities based on risk reduction impact:
+- **Implementation Group 1 (IG1)**: Essential cyber hygiene for all organizations. Covers asset inventory, data protection, secure configuration, access control, and basic monitoring.
+- **Implementation Group 2 (IG2)**: For organizations managing sensitive data. Adds email and web browser protections, malware defenses, and data recovery.
+- **Implementation Group 3 (IG3)**: For organizations facing sophisticated threats. Adds penetration testing, security awareness training programs, and application software security.
+
+For most digital agencies, achieving IG1 and IG2 compliance provides the security foundation insurers expect. CIS Controls are particularly useful because they map directly to the specific questions on insurance applications.
+
+### SOC 2 Type II: The Gold Standard for Client-Facing Agencies
+
+Service Organization Control (SOC) 2 Type II reports provide third-party attestations of your controls over security, availability, processing integrity, confidentiality, and privacy over an extended observation period, typically 6 to 12 months. SOC 2 is particularly valuable because it does not just verify that controls exist in written policy but that they are actively operating and producing intended outcomes.
+
+Cyber insurers particularly value SOC 2 Type II because:
+- Third-party attestation reduces underwriting reliance on self-reported claims
+- It provides independent verification that controls function as described
+- It demonstrates organizational commitment beyond minimum requirements
+
+Organizations pursuing SOC 2 Type II certification typically invest $25,000 to $100,000 or more in implementation and audit costs, but achieve potential premium reductions of 10 to 20 percent on cyber insurance (Source: SOC 2 Implementation Cost Analysis, 2025). For mid-size agencies handling sensitive client data, SOC 2 often pays for itself through combined insurance savings and competitive differentiation in client procurement processes.
+
+### ISO 27001: The International Standard
+
+ISO 27001 provides a comprehensive Information Security Management System (ISMS) framework for establishing, implementing, maintaining, and continuously improving organizational information security. Certification requires third-party audit validating appropriate controls across organizational, technical, and personnel dimensions.
+
+Cyber insurers recognize ISO 27001 certification with premium discounts of 10 to 15 percent, though savings are typically more modest than SOC 2 because ISO 27001 validates control existence while SOC 2 involves operational effectiveness testing over time.
+
+For agencies operating internationally or serving European clients subject to the Network and Information Security Directive 2 (NIS2) or the Digital Operational Resilience Act (DORA), ISO 27001 may carry additional value beyond insurance benefits.
+
+### Framework Comparison for Digital Agencies
+
+| Framework | Cost to Implement | Premium Reduction | Best For |
+|-----------|------------------|-------------------|----------|
+| NIST CSF 2.0 | Free (self-assessment) | 5-10% | All agencies as starting point |
+| CIS Controls | Free (self-implementation) | 5-10% | Agencies wanting prescriptive guidance |
+| SOC 2 Type II | $25,000-$100,000+ | 10-20% | Agencies serving enterprise clients |
+| ISO 27001 | $20,000-$80,000+ | 10-15% | Agencies with international operations |
+
+Our [cyber insurance application checklist](/blog/cyber-insurance-application-checklist) includes specific guidance on how to present framework compliance in your insurance application.
+
+## How Security Posture Directly Affects Insurability and Premiums
+
+The relationship between security controls and insurance pricing is not abstract. Here are the specific numbers our research uncovered.
+
+### The Premium Reduction Math
+
+A practical example illustrates the financial impact. Consider a digital marketing agency with 50 employees and $2 million in annual revenue facing a baseline cyber insurance quote of $25,000 annually.
+
+**Step 1: Implement MFA** (using existing Microsoft 365 capabilities)
+- Incremental cost: $0
+- Premium reduction: 10-15 percent
+- New annual premium: $21,250-$22,500
+- Annual savings: $2,500-$3,750
+
+**Step 2: Deploy EDR** at $5 per endpoint
+- Annual cost: $3,000 (50 endpoints)
+- Premium reduction: 15-20 percent additional
+- New annual premium: $17,500-$20,000
+- Annual savings: $5,000-$7,500 (cumulative)
+
+**Step 3: Document Incident Response Plan and Test Backups**
+- Annual cost: $1,500-$2,000 (staff time and tools)
+- Premium reduction: 5-10 percent additional
+- New annual premium: $15,000-$18,000
+- Annual savings: $7,000-$10,000 (cumulative)
+
+**Total Security Investment**: $4,500-$5,000 annually
+**Total Premium Savings**: $7,000-$10,000 annually
+**Net Annual Benefit**: $2,500-$5,000 in savings, plus dramatically reduced breach risk
+
+The security controls literally pay for themselves through insurance savings alone, before factoring in the reduced probability of a multi-million-dollar incident.
+
+### External Security Ratings: The Underwriter's Secret Weapon
+
+What many agency owners do not realize is that underwriters increasingly check your external security posture before you even submit an application. Services like BitSight and SecurityScorecard scan your public-facing infrastructure and assign security ratings based on observable factors including:
+
+- Open ports and exposed services
+- SSL/TLS certificate configuration
+- Email authentication (SPF, DKIM, DMARC) implementation
+- Known vulnerability exposure
+- Botnet and malware infection indicators
+- DNS health and configuration
+
+A poor rating from these services creates significant underwriting complications regardless of what you report on your application. Before applying for insurance, check your own external rating. SecurityScorecard offers a free self-assessment, and understanding your score before underwriters see it gives you the opportunity to remediate issues proactively.
+
+### The Claims Denial Connection
+
+The link between security posture and claims outcomes is direct and measurable. Of the nearly 25 percent of claims denied in 2024:
+
+- **37 percent** were denied for security control non-compliance, meaning the organization claimed to maintain controls during underwriting but failed to implement them or allowed them to lapse
+- **22 percent** were denied for outdated or unpatched systems
+- **17 percent** were denied for late notification, reporting incidents beyond the 48-72 hour policy window
+
+The controls most frequently cited in denial determinations include failure to maintain MFA (the single leading cause), outdated systems lacking current patches, and failure to implement documented incident response procedures. This means the same controls that reduce your premiums also protect you from having a claim denied when you need coverage most.
+
+## Self-Assessment Scoring Methodology
+
+To help our own agency evaluate readiness, we developed a scoring methodology based on what underwriters actually weight. Use this framework to assess your current posture and identify priority gaps.
+
+### Scoring Categories (100 Points Total)
+
+**Access Control (25 points)**
+- MFA enforced on all email accounts: 8 points
+- MFA enforced on VPN and remote access: 7 points
+- MFA enforced on all administrative accounts: 5 points
+- Centralized identity management (SSO): 3 points
+- Automated access deprovisioning for departing employees: 2 points
+
+**Endpoint Protection (20 points)**
+- EDR deployed on 100 percent of endpoints: 10 points
+- EDR with 24/7 monitoring and alerting: 5 points
+- Documented average detection-to-response time: 3 points
+- Mobile device management for company devices: 2 points
+
+**Data Protection and Backup (20 points)**
+- 3-2-1-1 backup architecture implemented: 8 points
+- Immutable or air-gapped backup copy: 5 points
+- Monthly backup restoration testing with documentation: 4 points
+- Data classification policy in place: 3 points
+
+**Incident Response (15 points)**
+- Written incident response plan: 5 points
+- Tabletop exercise conducted within past 12 months: 5 points
+- Defined incident response team with contact information: 3 points
+- Communication templates for breach notification: 2 points
+
+**Vulnerability Management (10 points)**
+- Regular vulnerability scanning (monthly minimum): 4 points
+- Documented patch management policy with SLAs: 3 points
+- Annual penetration testing: 3 points
+
+**Training and Awareness (10 points)**
+- Annual security awareness training with 90 percent or higher completion: 4 points
+- Monthly phishing simulations with click rates below 10 percent: 3 points
+- Documented remediation for employees who fail simulations: 3 points
+
+### Score Interpretation
+
+- **80-100 points**: Insurance-ready. You should qualify for the best available rates and have strong negotiating position.
+- **60-79 points**: Insurable with gaps. You will likely qualify for coverage but may face higher premiums or coverage restrictions. Prioritize closing gaps in Tier 1 controls.
+- **40-59 points**: At risk of denial. Significant gaps exist that may result in application denial or prohibitively expensive quotes. Focus on MFA, EDR, and backup remediation immediately.
+- **Below 40 points**: Likely denial. Your security posture does not meet minimum underwriting standards. Implement foundational controls before applying.
+
+## Common Gaps That Cause Application Denials
+
+Based on our research and broker conversations, these are the specific gaps that most frequently derail agency insurance applications.
+
+### Gap 1: Partial MFA Deployment
+
+The most common mistake is implementing MFA for some accounts but not all. An agency that enables MFA for executives but not for the entire team, or that covers email but not VPN access, will be flagged during underwriting. Carriers now verify MFA deployment through independent external scanning and comparison with application responses. If your application says MFA is implemented but your external scan shows unprotected remote access, the discrepancy triggers scrutiny of every other answer on your application.
+
+**Fix**: Enable MFA enforcement (not just availability) across all accounts. In Microsoft 365, use Conditional Access policies to require MFA for all users, all apps, and all locations. Document enforcement dates and user enrollment completion percentages.
+
+### Gap 2: Legacy Antivirus Instead of EDR
+
+Many agencies still run traditional antivirus software and assume it meets insurer requirements. It does not. Carriers specifically distinguish between signature-based antivirus and behavioral EDR, and the application questions are designed to identify which you have. Organizations using traditional antivirus without EDR face premium increases of 15 to 25 percent compared to those with comprehensive EDR deployment.
+
+**Fix**: Replace legacy antivirus with an EDR solution. If budget is a concern, check whether your existing Microsoft 365 license includes Defender for Endpoint. For agencies on E5 plans, enterprise-grade EDR may already be available at no additional cost.
+
+### Gap 3: Connected Backups Without Immutability
+
+Having backups is not enough. If your backup server sits on the same network as your production systems and uses the same administrative credentials, ransomware that compromises your network will encrypt your backups too. This is exactly what happens in 72 percent of ransomware incidents.
+
+**Fix**: Implement at least one immutable backup copy using cloud storage with object lock (AWS S3, Azure Blob Storage, or Backblaze B2). Ensure this copy cannot be modified or deleted even by administrators. Test restoration monthly and document the results.
+
+### Gap 4: No Written Incident Response Plan
+
+Surprisingly, many agencies operate without a formal incident response plan, assuming they will "figure it out" if something happens. Underwriters view this as a major red flag because organizations without plans experience significantly longer recovery periods and higher total losses.
+
+**Fix**: Create a written incident response plan covering four phases: preparation, detection and analysis, containment and recovery, and post-incident review. Include an incident response team roster with names, titles, and contact information. Conduct at least one tabletop exercise annually and document the results. The plan does not need to be elaborate. A clear, concise document with defined decision-making authority carries more underwriting weight than a 50-page document that nobody has read.
+
+### Gap 5: Unsupported Operating Systems
+
+As of October 2024, Windows 10 reached end-of-life, meaning Microsoft discontinued security update support. Agencies still running Windows 10 face immediate underwriting flags. Many carriers will decline coverage or require immediate upgrade commitment before binding a policy.
+
+**Fix**: Upgrade all endpoints to Windows 11 or a currently supported operating system. If hardware limitations prevent immediate upgrade, document a migration timeline and present it with your application.
+
+### Gap 6: No Employee Offboarding Process
+
+Digital agencies typically experience higher than average employee turnover, particularly among junior creative and account coordination roles. When employees leave, whether their access credentials are properly deprovisioned becomes a critical underwriting question. Agencies with annual turnover exceeding 25 percent but without automated access deprovisioning create elevated risk that former employees retain access to systems.
+
+**Fix**: Implement an automated offboarding checklist that includes immediate deactivation of all accounts (email, VPN, cloud platforms, client advertising accounts), revocation of shared credentials, and removal from password management vaults. Document the process and maintain records of deprovisioning actions.
+
+For more on what underwriters look for and how to prepare your application, see our [cyber insurance application checklist](/blog/cyber-insurance-application-checklist).
+
+## Step-by-Step Audit Process
+
+Here is the systematic process our agency followed to prepare for our insurance application. We recommend starting this process at least 90 days before you plan to apply.
+
+### Week 1-2: Discovery and Inventory
+
+**Asset Inventory**: Document every device, application, and cloud service your agency uses. Include workstations, servers, mobile devices, SaaS platforms, cloud infrastructure, and any client systems you access. This inventory forms the foundation for every subsequent audit step.
+
+**Data Mapping**: Identify what data your agency collects, processes, and stores. Categorize it by sensitivity: client personal information, client financial data, advertising account credentials, campaign performance data, and agency proprietary information. Document where each data type resides and who has access.
+
+**Vendor Inventory**: List every third-party vendor that has access to your systems or data. Include cloud providers, managed IT services, freelance contractors with system access, and SaaS platforms. Document their security certifications and whether they maintain cyber insurance.
+
+### Week 3-4: Control Assessment
+
+**MFA Audit**: Verify MFA enforcement status across all systems. Check email, VPN, administrative accounts, cloud platforms, and client-facing tools. Document enforcement dates and any exceptions with justification.
+
+**Endpoint Assessment**: Verify EDR deployment coverage. Confirm what percentage of endpoints are protected and whether monitoring is active 24/7. Document the EDR vendor, deployment date, and average detection-to-response time.
+
+**Backup Verification**: Test backup restoration for critical systems. Document the backup architecture, verify immutability settings, and confirm that backup data cannot be accessed through compromised administrative credentials. Record restoration test results with dates.
+
+**Vulnerability Scan**: Run external and internal vulnerability scans using Qualys FreeScan or OpenVAS. Document findings and create a remediation plan with timelines for each identified vulnerability.
+
+### Week 5-6: Policy and Documentation
+
+**Incident Response Plan**: Write or update your incident response plan. Include team roster, escalation paths, communication templates, and legal notification procedures. Schedule a tabletop exercise.
+
+**Security Policies**: Document your information security policy, acceptable use policy, data classification policy, backup and disaster recovery plan, and vendor risk management procedures. These do not need to be lengthy, but they need to exist and be current.
+
+**Training Records**: Compile security awareness training completion records. If you have not conducted training recently, schedule it immediately and document completion rates.
+
+### Week 7-8: Remediation
+
+**Close Critical Gaps**: Address any Tier 1 control gaps identified during assessment. Implement MFA where missing, deploy EDR if not present, and establish immutable backup copies.
+
+**Patch Outstanding Vulnerabilities**: Apply critical patches identified during vulnerability scanning. Document remediation actions and dates.
+
+**Conduct Tabletop Exercise**: Run your incident response tabletop exercise and document participation, scenarios tested, and lessons learned.
+
+### Week 9-10: Documentation Package
+
+**Compile Evidence**: Gather screenshots from MFA management consoles, EDR deployment reports, backup architecture diagrams, vulnerability scan results, patch management reports, training completion records, and incident response plan with tabletop exercise documentation.
+
+**External Rating Check**: Check your SecurityScorecard or BitSight rating. Remediate any issues that could negatively impact your score before underwriters see it.
+
+**Application Preparation**: With your evidence package assembled, you are ready to complete insurance applications with confidence. Every answer can be supported by documentation, dramatically reducing the risk of misrepresentation that could lead to claim denial later.
+
+> **Ready to start your insurance application?** After completing your security audit, use our [recommendation engine](/tools/recommendation-engine) to get matched with carriers that fit your agency's profile. [Coalition](https://coalition.com) offers AI-powered risk assessment during the application process, while [At-Bay](https://at-bay.com) provides active risk monitoring that can identify gaps before they become problems.
+
+## Documentation Requirements: What to Have Ready
+
+When you sit down to complete your insurance application, having these documents organized and accessible will streamline the process and strengthen your application.
+
+### Essential Documentation Checklist
+
+- **MFA Console Screenshots**: Showing enforcement status across all systems with user enrollment percentages
+- **EDR Deployment Report**: Confirming coverage percentage, active monitoring status, and recent threat detection activity
+- **Backup Architecture Diagram**: Showing 3-2-1-1 compliance with immutability verification
+- **Restoration Test Records**: Dated records of successful backup restoration tests
+- **Vulnerability Scan Reports**: Recent scans (within 30 days) showing current security posture
+- **Patch Management Records**: Showing critical patch deployment timelines and current compliance status
+- **Incident Response Plan**: Current version with team roster and tabletop exercise documentation
+- **Security Awareness Training Records**: Completion rates and phishing simulation results
+- **Security Policies**: Information security policy, acceptable use policy, data classification policy
+- **Vendor Risk Assessments**: Documentation of critical vendor security evaluations
+- **Network Diagram**: Showing segmentation, data flows, and security control placement
+- **Employee and Revenue Information**: Current headcount, revenue figures, and role breakdown
+
+If your agency has achieved SOC 2 Type II certification, ISO 27001 certification, or completed a recent penetration test, include these reports as well. SOC 2 reports carry particular weight because they represent independent third-party verification of security controls tested over time rather than self-reported at a single point.
+
+## Remediation Prioritization: Where to Start If You Are Behind
+
+If your self-assessment score is below 60, do not panic. Prioritize remediation based on the controls that have the highest impact on both insurability and actual security.
+
+### Priority 1 (Complete Within 2 Weeks)
+1. **Enable MFA everywhere**: Start with email and remote access. This is the single action most likely to prevent both a breach and an application denial.
+2. **Deploy EDR**: Replace legacy antivirus. If budget is tight, check your existing Microsoft 365 license for Defender for Endpoint.
+3. **Establish one immutable backup**: Even if your full backup architecture is not yet 3-2-1-1 compliant, creating one immutable copy of critical data in cloud storage with object lock provides immediate protection.
+
+### Priority 2 (Complete Within 30 Days)
+4. **Write an incident response plan**: Use a template if needed. The NIST Computer Security Incident Handling Guide provides a free framework.
+5. **Run a vulnerability scan**: Use Qualys FreeScan or OpenVAS to identify and document your current exposure.
+6. **Implement email authentication**: Configure SPF, DKIM, and DMARC for your email domain.
+
+### Priority 3 (Complete Within 60 Days)
+7. **Conduct security awareness training**: Deploy a training program and run your first phishing simulation.
+8. **Document patch management procedures**: Establish SLAs for critical, high, and medium severity patches.
+9. **Conduct a tabletop exercise**: Simulate a ransomware scenario with your incident response team.
+10. **Check your external security rating**: Remediate any issues visible to underwriters.
+
+This prioritized approach ensures you address the controls most likely to cause application denial first, then build toward a comprehensive security posture that earns maximum premium reductions.
+
+For agencies that have already secured coverage and want to optimize at renewal, our [cyber insurance renewal guide](/blog/cyber-insurance-renewal-guide) covers how to leverage security improvements for better renewal terms.
+
+## Summary: Your Pre-Insurance Security Roadmap
+
+Preparing for cyber insurance is not just about checking boxes on an application. It is about building a security posture that protects your agency, satisfies underwriters, and earns you the best possible coverage at the lowest possible price.
+
+We started by examining why pre-insurance audits matter more than ever, with nearly one in four claims denied in 2024 and 37 percent of those denials stemming from security control non-compliance. We then ranked the controls that matter most by premium impact, with MFA, EDR, and immutable backups forming the non-negotiable Tier 1 that can result in application denial if missing.
+
+The free and affordable tools section demonstrated that implementing proper security does not require enterprise budgets. MFA is free with existing Microsoft 365 or Google Workspace licenses, vulnerability scanning is free with Qualys FreeScan and OpenVAS, and EDR costs as little as $3 to $5 per endpoint per month.
+
+We compared four compliance frameworks, recommending NIST CSF 2.0 as the universal starting point for all agencies, CIS Controls for prescriptive implementation guidance, SOC 2 Type II for agencies serving enterprise clients, and ISO 27001 for international operations. Each framework offers measurable premium reductions ranging from 5 to 20 percent.
+
+The premium reduction math showed that a 50-person agency investing $4,500 to $5,000 annually in security controls can save $7,000 to $10,000 in premiums, generating a positive return before even considering the reduced risk of a multi-million-dollar breach. External security ratings from BitSight and SecurityScorecard add another dimension that underwriters check independently.
+
+Our self-assessment scoring methodology provides a concrete way to evaluate your readiness, and the step-by-step audit process gives you a 10-week roadmap from discovery through application-ready documentation. The common gaps section highlights the specific issues that most frequently cause denials, with actionable fixes for each.
+
+The bottom line: every dollar you invest in security controls before applying for insurance pays dividends in lower premiums, stronger coverage, and reduced risk of both breaches and claim denials. Start your audit today, and approach your insurance application from a position of strength.
+
+## Sources
+
+1. Verizon Data Breach Investigations Report, 2024 - Human error attribution and credential-based attack statistics
+2. Coalition Cyber Claims Report, 2024 - BEC claims frequency, ransomware trends, and negotiation outcomes
+3. IBM Cost of a Data Breach Report, 2024 - Incident response plan impact on recovery times and costs
+4. Veeam Ransomware Trends Report, 2024 - Backup targeting statistics in ransomware incidents
+5. NIST Cybersecurity Framework 2.0, February 2024 - Framework structure, core functions, and implementation guidance
+6. Global Cyber Insurance Market Report, 2025 - Market size, premium trends, and underwriting standards
+7. Cyber Insurance Claims Analysis, 2024 - Claims denial rates and reasons for denial
+8. SOC 2 Implementation Cost Analysis, 2025 - Certification costs and insurance premium impact
+9. Industry EDR Effectiveness Data, 2025 - Dwell time reduction and behavioral detection capabilities
+10. SecurityScorecard External Rating Methodology, 2025 - Rating factors and underwriter usage patterns
+11. CIS Critical Security Controls v8.1, 2024 - Control families and implementation group prioritization
+12. California Consumer Privacy Act Cybersecurity Audit Requirements, 2025 - Annual audit mandates

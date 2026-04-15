@@ -12,6 +12,7 @@ export interface ArticleFrontmatter {
   seo_title?: string;
   seo_description?: string;
   featured?: boolean;
+  faq?: { q: string; a: string }[];
 }
 
 export interface AffiliateReference {
@@ -33,6 +34,7 @@ export interface ComparisonFrontmatter {
   category: string;
   seo_title?: string;
   seo_description?: string;
+  faq?: { q: string; a: string }[];
 }
 
 export interface ComparisonMeta extends ComparisonFrontmatter {

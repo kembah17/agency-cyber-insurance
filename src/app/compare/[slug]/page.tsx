@@ -8,6 +8,7 @@ import {
   createMetadata,
   getArticleJsonLd,
   getBreadcrumbJsonLd,
+  getFAQJsonLd,
   SITE_URL,
 } from "@/lib/metadata";
 import MDXContent from "@/components/MDXContent";
@@ -96,6 +97,13 @@ export default async function ComparisonPage({ params }: PageProps) {
           },
         ])}
       />
+      {comparison.meta.faq && comparison.meta.faq.length > 0 && (
+        <JsonLd
+          data={getFAQJsonLd(
+            comparison.meta.faq.map((f) => ({ question: f.q, answer: f.a }))
+          )}
+        />
+      )}
 
       <article className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <BreadcrumbNav

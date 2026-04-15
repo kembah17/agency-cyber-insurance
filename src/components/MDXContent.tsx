@@ -1,6 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
+import rehypeExternalLinks from "rehype-external-links";
 import ComparisonTable from "./ComparisonTable";
 import CTABox from "./CTABox";
 import ProsCons from "./ProsCons";
@@ -32,7 +33,10 @@ export default function MDXContent({ source }: MDXContentProps) {
         options={{
           mdxOptions: {
             remarkPlugins: [remarkGfm],
-            rehypePlugins: [rehypeSlug],
+            rehypePlugins: [
+              rehypeSlug,
+              [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }],
+            ],
           },
         }}
       />

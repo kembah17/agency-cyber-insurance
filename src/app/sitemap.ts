@@ -1,11 +1,11 @@
 import { MetadataRoute } from "next";
-import { getAllPostSlugs, getAllComparisonSlugs } from "@/lib/content";
+import { getAllPosts, getAllComparisons } from "@/lib/content";
 
 const SITE_URL = "https://agencycyberinsurance.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const postSlugs = getAllPostSlugs();
-  const comparisonSlugs = getAllComparisonSlugs();
+  const posts = getAllPosts();
+  const comparisons = getAllComparisons();
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -25,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/tools/recommendation-engine`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${SITE_URL}/about`,
@@ -52,17 +58,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const blogPages: MetadataRoute.Sitemap = postSlugs.map((slug) => ({
-    url: `${SITE_URL}/blog/${slug}`,
-    lastModified: new Date(),
+  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updated || post.date),
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
-  const comparisonPages: MetadataRoute.Sitemap = comparisonSlugs.map(
-    (slug) => ({
-      url: `${SITE_URL}/compare/${slug}`,
-      lastModified: new Date(),
+  const comparisonPages: MetadataRoute.Sitemap = comparisons.map(
+    (comparison) => ({
+      url: `${SITE_URL}/compare/${comparison.slug}`,
+      lastModified: new Date(comparison.updated || comparison.date),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })

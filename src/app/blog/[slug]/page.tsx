@@ -10,6 +10,7 @@ import {
   createMetadata,
   getArticleJsonLd,
   getBreadcrumbJsonLd,
+  getFAQJsonLd,
   SITE_URL,
 } from "@/lib/metadata";
 import MDXContent from "@/components/MDXContent";
@@ -104,6 +105,13 @@ export default async function BlogPostPage({ params }: PageProps) {
           { name: post.meta.title, url: `${SITE_URL}/blog/${slug}` },
         ])}
       />
+      {post.meta.faq && post.meta.faq.length > 0 && (
+        <JsonLd
+          data={getFAQJsonLd(
+            post.meta.faq.map((f) => ({ question: f.q, answer: f.a }))
+          )}
+        />
+      )}
 
       <article className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <BreadcrumbNav

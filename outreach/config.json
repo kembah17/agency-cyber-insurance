@@ -1,0 +1,29 @@
+{
+  "brevo": {
+    "api_key": "YOUR_BREVO_API_KEY",
+    "smtp_server": "smtp-relay.brevo.com",
+    "smtp_port": 587,
+    "sender_email": "hello@agencycyberinsurance.com",
+    "sender_name": "AgencyCyberInsurance.com"
+  },
+  "site": {
+    "name": "AgencyCyberInsurance.com",
+    "url": "https://agencycyberinsurance.com",
+    "niche": "cyber liability insurance for digital agencies"
+  },
+  "outreach": {
+    "daily_scan_limit": 20,
+    "followup_days": [
+      5,
+      12,
+      21
+    ],
+    "max_followups": 3,
+    "cooldown_days_after_reject": 90,
+    "batch_size": 10
+  },
+  "approval": {
+    "mode": "approve_all",
+    "digest_format": "markdown"
+  }
+}

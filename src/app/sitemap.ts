@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/tools/recommendation-engine`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
     },
     {
       url: `${SITE_URL}/about`,
@@ -62,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.updated || post.date),
     changeFrequency: "weekly" as const,
-    priority: 0.8,
+    priority: post.featured ? 0.9 : 0.8,
   }));
 
   const comparisonPages: MetadataRoute.Sitemap = comparisons.map(

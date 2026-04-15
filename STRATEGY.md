@@ -781,3 +781,46 @@ The following data informed the decision to pursue niche affiliate sites over ot
 - [x] Build passing (19/19 routes)
 - [x] Deployed to Vercel via GitHub push
 
+
+## Step 7: Content Scaling (Completed)
+- **Status:** ✅ Complete
+- **Date:** 2026-04-15
+- **Total Articles:** 21 (14 blog + 7 compare)
+- **Estimated Total Words:** ~126,000 across all articles
+- **Research:** 4 deep research queries compiled into comprehensive data
+
+### Content Scaling Summary
+
+#### New Blog Articles (8 added)
+| # | Article | Slug |
+|---|---------|------|
+| 1 | Cyber Insurance Application Checklist | `cyber-insurance-application-checklist` |
+| 2 | Cyber Insurance Renewal Guide | `cyber-insurance-renewal-guide` |
+| 3 | Cyber Insurance for SEO & PPC Agencies | `cyber-insurance-seo-ppc-agencies` |
+| 4 | Cyber Insurance for Social Media Agencies | `cyber-insurance-social-media-agencies` |
+| 5 | Cyber Insurance Trends 2025-2026 | `cyber-insurance-trends-2025` |
+| 6 | Cyber Insurance for Web Dev Agencies | `cyber-insurance-web-development-agencies` |
+| 7 | Cyber Security Audit Checklist | `cyber-security-audit-checklist` |
+| 8 | How to File a Cyber Insurance Claim | `how-to-file-cyber-insurance-claim` |
+| 9 | How to Reduce Cyber Insurance Premiums | `how-to-reduce-cyber-insurance-premiums` |
+| 10 | Ransomware Coverage for Digital Agencies | `ransomware-coverage-digital-agencies` |
+
+#### New Compare Articles (4 added)
+| # | Article | Slug |
+|---|---------|------|
+| 1 | At-Bay vs Coalition | `at-bay-vs-coalition` |
+| 2 | Best Cyber Insurance for Small Agencies | `best-cyber-insurance-small-agencies` |
+| 3 | CFC vs Hiscox | `cfc-vs-hiscox` |
+| 4 | Chubb vs Coalition | `chubb-vs-coalition` |
+
+### SEO Finalization
+- [x] FAQPage JSON-LD schema on all articles with FAQ frontmatter
+- [x] Pillar article FAQ added (8 items)
+- [x] Sitemap updated with correct priorities (pillar=0.9, blog=0.8, compare=0.8, tools=0.7)
+- [x] Cross-links added from original 7 articles to new 14 articles
+- [x] Build passing with zero errors
+
+### Next Steps
+- Step 8: Analytics & tracking setup (GA4, Search Console)
+- Step 9: Backlink outreach campaign
+- Step 10: Email/newsletter system setup

@@ -378,8 +378,8 @@ def draft_email(prospect: dict, config: dict, templates: dict[str, dict]) -> dic
     raw_body = tpl.get("body", "")
 
     # Personalise
-    subject, body = personalize(raw_subject, raw_subject, prospect, config)
-    _, _ = personalize(raw_subject, raw_subject, prospect, config)  # for subject in body refs
+    subject, body = personalize(raw_body, raw_subject, prospect, config)
+    # Follow-up personalisation
 
     now_utc = datetime.now(timezone.utc).isoformat()
 

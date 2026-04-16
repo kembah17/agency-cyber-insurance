@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AFFILIATE_PROVIDERS, getAffiliateUrl } from "@/lib/affiliates";
+import { dispatchEmailCapture } from "@/lib/email-sync";
 import { trackToolUsage, trackCTAClick } from "@/lib/analytics";
 
 /* ------------------------------------------------------------------ */
@@ -793,6 +794,9 @@ export default function PolicyScrutinizer() {
       setShowFullReport(true);
       setShowEmailGate(false);
       trackToolUsage("policy_scrutinizer", "email_captured", email);
+
+      // Dispatch cross-component email capture event
+      dispatchEmailCapture(email, "policy_scrutinizer");
     },
     []
   );
@@ -816,6 +820,11 @@ export default function PolicyScrutinizer() {
     trackToolUsage("policy_scrutinizer", "restarted");
   }, []);
 
+  const handlePrintReport = useCallback(() => {
+    trackToolUsage("policy_scrutinizer", "pdf_downloaded");
+    window.print();
+  }, []);
+
   /* ---------- Analyzing state ---------- */
   if (analyzing) {
     return <AnalysisProgress progress={progress} />;
@@ -828,6 +837,14 @@ export default function PolicyScrutinizer() {
 
     return (
       <div ref={resultsRef}>
+        {/* Print-only Report Header */}
+        <div className="hidden print:block print-report-header mb-8">
+          <h1 className="text-2xl font-bold text-navy">Cyber Insurance Policy Analysis Report</h1>
+          <p className="print-date text-sm text-gray-500 mt-1">
+            Generated on {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} by AgencyCyberInsurance.com Policy Scrutinizer
+          </p>
+        </div>
+
         {/* Score Overview */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-teal/10 text-teal font-semibold px-4 py-2 rounded-full text-sm mb-4">
@@ -1029,6 +1046,59 @@ export default function PolicyScrutinizer() {
           </div>
         )}
 
+        {/* Download PDF Report — only after email capture */}
+        {showFullReport && emailCaptured && (
+          <div className="mb-10 bg-gradient-to-r from-navy/5 to-teal/5 rounded-xl border border-teal/20 p-6 text-center print:hidden">
+            <h3 className="text-lg font-bold text-navy mb-2">Save Your Analysis</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Download a clean PDF of your complete gap analysis report for your records or to share with your team.
+            </p>
+            <button
+              onClick={handlePrintReport}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy/90 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              Download PDF Report
+            </button>
+          </div>
+        )}
+
+        {/* Security Audit Upsell — only in full report */}
+        {showFullReport && emailCaptured && summary.gaps.length > 0 && (
+          <div className="mb-10 bg-white rounded-xl border-2 border-teal/30 p-6 print:hidden">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-teal/10 rounded-xl flex items-center justify-center shrink-0">
+                <svg className="w-6 h-6 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-navy mb-2">
+                  Turn These Gaps Into Savings
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Agencies that complete a security posture review before shopping for coverage save{" "}
+                  <strong className="text-navy">15&ndash;30% on premiums</strong>. Our Security Readiness
+                  Assessment evaluates your actual infrastructure against insurer requirements &mdash;
+                  identifying exactly which controls will lower your costs.
+                </p>
+                <a
+                  href="/contact?ref=scrutinizer-upsell"
+                  onClick={() => trackCTAClick("security_audit_upsell", "Get Your Security Assessment", "scrutinizer")}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-teal text-white font-semibold rounded-lg hover:bg-teal/90 transition-colors"
+                >
+                  Get Your Security Assessment
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* CTA Section */}
         <div className="grid sm:grid-cols-2 gap-4 mb-8">
           <a
@@ -1061,16 +1131,60 @@ export default function PolicyScrutinizer() {
           </button>
         </div>
 
-        {/* Disclaimer */}
-        <div className="bg-gray-50 rounded-xl border border-gray-200 p-5 text-center">
-          <p className="text-xs text-gray-500 leading-relaxed">
-            <strong>Disclaimer:</strong> This tool provides a general analysis
-            based on keyword matching and should not be considered professional
-            insurance advice. Policy language is complex and context-dependent.
-            Always consult with a licensed insurance broker for definitive
-            coverage analysis. Affiliate links may earn us a commission at no
-            cost to you.
-          </p>
+        {/* Comprehensive Disclaimer */}
+        <div id="scrutinizer-disclaimer" className="bg-gray-50 rounded-xl border border-gray-200 p-6">
+          <h4 className="text-sm font-bold text-navy mb-3 flex items-center gap-2">
+            <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+            </svg>
+            Important Disclaimers
+          </h4>
+          <div className="space-y-2 text-xs text-gray-500 leading-relaxed">
+            <p>
+              <strong>For Informational Purposes Only.</strong> This tool provides
+              a general, keyword-based analysis of your policy text and should not
+              be considered professional insurance, legal, or financial advice.
+            </p>
+            <p>
+              <strong>Analysis Limitations.</strong> This tool uses keyword matching
+              to identify coverage areas. It may miss coverage that uses non-standard
+              language, or flag false positives where keywords appear in exclusions
+              or limitations. Policy language is complex and context-dependent.
+            </p>
+            <p>
+              <strong>No Guarantee of Accuracy.</strong> We make no guarantee of the
+              accuracy, completeness, or reliability of this analysis. Coverage
+              determinations depend on specific policy language, endorsements,
+              exclusions, and applicable law.
+            </p>
+            <p>
+              <strong>Data Privacy.</strong> Your policy text is analyzed entirely
+              in your browser. We do not store, transmit, or have access to your
+              policy documents. No data leaves your device during analysis.
+            </p>
+            <p>
+              <strong>Affiliate Disclosure.</strong> Some links on this page are
+              affiliate links. If you purchase through these links, we may earn a
+              commission at no additional cost to you. This does not influence our
+              analysis or recommendations.
+            </p>
+            <p>
+              <strong>Limitation of Liability.</strong> We accept no liability for
+              decisions made based on this analysis. Any actions taken based on this
+              report are at your own risk.
+            </p>
+            <p>
+              <strong>Always consult with a licensed insurance broker or attorney</strong>{" "}
+              for definitive coverage analysis and professional advice tailored to
+              your specific situation.
+            </p>
+          </div>
+        </div>
+
+        {/* Print-only Report Footer */}
+        <div className="hidden print:block print-report-footer mt-8">
+          <p>Generated by AgencyCyberInsurance.com Policy Scrutinizer</p>
+          <p>For professional advice, consult a licensed insurance broker or attorney.</p>
         </div>
 
         {/* Email Gate Modal */}

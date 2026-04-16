@@ -1,7 +1,7 @@
 [
   {
-    "id": "b382dea1-1a56-4db7-892b-c60f506f23ef",
-    "created": "2026-04-16T11:55:22.810421+00:00",
+    "id": "d4674d15-74b4-4add-8da0-0841b8c2ef19",
+    "created": "2026-04-16T12:04:46.359657+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -20,8 +20,8 @@
     "reject_reason": null
   },
   {
-    "id": "9e9afcdf-4c73-4139-8701-f91b72b3b30e",
-    "created": "2026-04-16T11:55:22.811935+00:00",
+    "id": "d4b8ebf5-639a-4541-b978-1886587b6adf",
+    "created": "2026-04-16T12:04:46.360396+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -31,7 +31,7 @@
       "da_estimate": 0
     },
     "email": {
-      "subject": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "subject": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
       "body": "Hi there,\n\nI'm reaching out with a guest post pitch that offers something your publication doesn't see often — the cyber insurance buyer's perspective.\n\nMost cybersecurity articles about insurance come from brokers or carriers. I'm an agency owner who spent months researching cyber liability coverage, comparing providers, and documenting what underwriters actually evaluate. I've published 21 in-depth guides on the topic and built a free recommendation engine that matches agencies with appropriate coverage.\n\nHere are three angles I think cybersafetyzone.com readers would find valuable:\n\n1. \"Inside the Cyber Insurance Application: The 12 Security Controls Underwriters Actually Score\" — Based on real application analysis across six carriers, here's exactly what moves the needle on approval and pricing. MFA isn't optional (10–20% premium increase without it). EDR is now table stakes. But immutable backups? That's the one saving agencies 12–20%.\n\n2. \"Why 29–39% of Cyber Insurance Claims Are Funds Transfer Fraud — and What That Means for Your Security Stack\" — The threat model insurers care about most isn't ransomware anymore. It's BEC and social engineering. Here's how that should reshape your clients' security priorities.\n\n3. \"The Gap Between Security Compliance and Insurance Readiness\" — SOC 2 Type II gets you 10–20% off premiums. ISO 27001 gets 10–15%. But NIST CSF alignment? Only 5–10%. Why the disconnect matters for security professionals advising clients.\n\nI write from direct experience, not theory. Every data point comes from real carrier applications, published rate analyses, and claims data.\n\nPublished references:\n- Cyber Insurance Application Checklist: https://agencycyberinsurance.com/blog/cyber-insurance-application-checklist\n- How to Reduce Cyber Insurance Premiums: https://agencycyberinsurance.com/blog/how-to-reduce-cyber-insurance-premiums\n\nWord count is flexible — I can write 600–800 words for a column or 1,500–2,500 for a feature. Happy to send an outline first.\n\nBest,\nAgency Cyber Insurance\nFounder, AgencyCyberInsurance.com",
       "template_used": "guest_post_cybersecurity"
     },
@@ -40,8 +40,8 @@
     "reject_reason": null
   },
   {
-    "id": "4f1618a9-fa24-4095-81c1-1994f2f1a736",
-    "created": "2026-04-16T11:55:22.812680+00:00",
+    "id": "46624975-1cb4-4ad0-8f97-0be3ec1a3f7d",
+    "created": "2026-04-16T12:04:46.361007+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -60,8 +60,8 @@
     "reject_reason": null
   },
   {
-    "id": "4836aa26-018c-4613-aa71-1d27fe1b1a78",
-    "created": "2026-04-16T11:55:22.813416+00:00",
+    "id": "ac4be348-db98-4020-bbaa-c3c1bff760a7",
+    "created": "2026-04-16T12:04:46.361792+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -71,7 +71,7 @@
       "da_estimate": 0
     },
     "email": {
-      "subject": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "subject": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
       "body": "Hi there,\n\nI'm reaching out with a guest post pitch that offers something your publication doesn't see often — the cyber insurance buyer's perspective.\n\nMost cybersecurity articles about insurance come from brokers or carriers. I'm an agency owner who spent months researching cyber liability coverage, comparing providers, and documenting what underwriters actually evaluate. I've published 21 in-depth guides on the topic and built a free recommendation engine that matches agencies with appropriate coverage.\n\nHere are three angles I think loginradius.com readers would find valuable:\n\n1. \"Inside the Cyber Insurance Application: The 12 Security Controls Underwriters Actually Score\" — Based on real application analysis across six carriers, here's exactly what moves the needle on approval and pricing. MFA isn't optional (10–20% premium increase without it). EDR is now table stakes. But immutable backups? That's the one saving agencies 12–20%.\n\n2. \"Why 29–39% of Cyber Insurance Claims Are Funds Transfer Fraud — and What That Means for Your Security Stack\" — The threat model insurers care about most isn't ransomware anymore. It's BEC and social engineering. Here's how that should reshape your clients' security priorities.\n\n3. \"The Gap Between Security Compliance and Insurance Readiness\" — SOC 2 Type II gets you 10–20% off premiums. ISO 27001 gets 10–15%. But NIST CSF alignment? Only 5–10%. Why the disconnect matters for security professionals advising clients.\n\nI write from direct experience, not theory. Every data point comes from real carrier applications, published rate analyses, and claims data.\n\nPublished references:\n- Cyber Insurance Application Checklist: https://agencycyberinsurance.com/blog/cyber-insurance-application-checklist\n- How to Reduce Cyber Insurance Premiums: https://agencycyberinsurance.com/blog/how-to-reduce-cyber-insurance-premiums\n\nWord count is flexible — I can write 600–800 words for a column or 1,500–2,500 for a feature. Happy to send an outline first.\n\nBest,\nAgency Cyber Insurance\nFounder, AgencyCyberInsurance.com",
       "template_used": "guest_post_cybersecurity"
     },
@@ -80,8 +80,8 @@
     "reject_reason": null
   },
   {
-    "id": "0455e926-7ab2-4ea7-af56-cc7f1e1d9ffa",
-    "created": "2026-04-16T11:55:22.814138+00:00",
+    "id": "df7434f5-631a-476f-b1a0-0b8cfba8bb29",
+    "created": "2026-04-16T12:04:46.362506+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -91,7 +91,7 @@
       "da_estimate": 0
     },
     "email": {
-      "subject": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "subject": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
       "body": "Hi there,\n\nI'm reaching out with a guest post pitch that offers something your publication doesn't see often — the cyber insurance buyer's perspective.\n\nMost cybersecurity articles about insurance come from brokers or carriers. I'm an agency owner who spent months researching cyber liability coverage, comparing providers, and documenting what underwriters actually evaluate. I've published 21 in-depth guides on the topic and built a free recommendation engine that matches agencies with appropriate coverage.\n\nHere are three angles I think lmeservices.com readers would find valuable:\n\n1. \"Inside the Cyber Insurance Application: The 12 Security Controls Underwriters Actually Score\" — Based on real application analysis across six carriers, here's exactly what moves the needle on approval and pricing. MFA isn't optional (10–20% premium increase without it). EDR is now table stakes. But immutable backups? That's the one saving agencies 12–20%.\n\n2. \"Why 29–39% of Cyber Insurance Claims Are Funds Transfer Fraud — and What That Means for Your Security Stack\" — The threat model insurers care about most isn't ransomware anymore. It's BEC and social engineering. Here's how that should reshape your clients' security priorities.\n\n3. \"The Gap Between Security Compliance and Insurance Readiness\" — SOC 2 Type II gets you 10–20% off premiums. ISO 27001 gets 10–15%. But NIST CSF alignment? Only 5–10%. Why the disconnect matters for security professionals advising clients.\n\nI write from direct experience, not theory. Every data point comes from real carrier applications, published rate analyses, and claims data.\n\nPublished references:\n- Cyber Insurance Application Checklist: https://agencycyberinsurance.com/blog/cyber-insurance-application-checklist\n- How to Reduce Cyber Insurance Premiums: https://agencycyberinsurance.com/blog/how-to-reduce-cyber-insurance-premiums\n\nWord count is flexible — I can write 600–800 words for a column or 1,500–2,500 for a feature. Happy to send an outline first.\n\nBest,\nAgency Cyber Insurance\nFounder, AgencyCyberInsurance.com",
       "template_used": "guest_post_cybersecurity"
     },
@@ -100,8 +100,8 @@
     "reject_reason": null
   },
   {
-    "id": "58deb28c-62ff-4a8e-b72f-215dc8de52b7",
-    "created": "2026-04-16T11:55:22.815103+00:00",
+    "id": "adbdc27b-c90b-4786-bd51-44a4aa224ce6",
+    "created": "2026-04-16T12:04:46.363368+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -120,8 +120,8 @@
     "reject_reason": null
   },
   {
-    "id": "2c49e38a-9aef-4ef7-bec4-d8a8e1fb5b4e",
-    "created": "2026-04-16T11:55:22.816523+00:00",
+    "id": "a7f3fafe-d5a9-4ef5-ba0e-84e3cb01467d",
+    "created": "2026-04-16T12:04:46.370292+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -140,8 +140,8 @@
     "reject_reason": null
   },
   {
-    "id": "0423fd4c-d8ff-434a-8c20-02a250ea51cc",
-    "created": "2026-04-16T11:55:22.818036+00:00",
+    "id": "90a42f5c-7887-4be4-af5a-4e211efdfc95",
+    "created": "2026-04-16T12:04:46.371642+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -160,8 +160,8 @@
     "reject_reason": null
   },
   {
-    "id": "d1e8e85b-6c72-43d7-8986-3df71000e844",
-    "created": "2026-04-16T11:55:22.819297+00:00",
+    "id": "ca1cd62e-6929-4299-a244-64da72c7e4ff",
+    "created": "2026-04-16T12:04:46.373624+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -180,8 +180,8 @@
     "reject_reason": null
   },
   {
-    "id": "3056c504-4545-4c6d-87e4-4d0c2ef1237e",
-    "created": "2026-04-16T11:55:22.827447+00:00",
+    "id": "8a395eac-8056-4975-ad46-d798ec7667e4",
+    "created": "2026-04-16T12:04:46.374819+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -200,8 +200,8 @@
     "reject_reason": null
   },
   {
-    "id": "8bce0080-41ef-432e-aee2-5e2f9bdba21b",
-    "created": "2026-04-16T11:55:22.828938+00:00",
+    "id": "51e34bdc-0b1c-4718-aa3c-e65041518a23",
+    "created": "2026-04-16T12:04:46.375789+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -220,8 +220,8 @@
     "reject_reason": null
   },
   {
-    "id": "c28077ec-a127-47ef-88f4-713c491d9128",
-    "created": "2026-04-16T11:55:22.829823+00:00",
+    "id": "41726cdd-9795-49bd-9468-bae141b59166",
+    "created": "2026-04-16T12:04:46.377199+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -231,7 +231,7 @@
       "da_estimate": 0
     },
     "email": {
-      "subject": "Addition for Your cyber insurance Resource Page — Agency Cyber Insurance Guide",
+      "subject": "Resource Suggestion for cyberdegrees.org — Free Cyber Insurance Tool for Small Businesses",
       "body": "Hi Team,\n\nI came across your cyberdegrees.org resource page at cyberdegrees.org — it's one of the most comprehensive collections on cyber insurance I've found.\n\nI noticed the page covers [SPECIFIC TOPICS ALREADY ON THE PAGE] but doesn't include guidance on cyber insurance specifically for professional services firms and small agencies. I'd like to suggest two resources that would fill that gap for your visitors:\n\n1. **Free Cyber Insurance Recommendation Engine** — An interactive tool that helps small business owners determine what type and level of cyber liability coverage they need based on their specific risk profile (team size, data types handled, revenue, existing security controls).\n   → https://agencycyberinsurance.com/tools/recommendation-engine\n\n2. **Complete Guide to Cyber Insurance for Digital Agencies** — A 6,000+ word guide covering what's covered, what's excluded, real cost data ($1,500–$4,000/year for most small agencies), and how to evaluate providers.\n   → https://agencycyberinsurance.com/blog/cyber-insurance-guide-digital-agencies\n\nBoth resources are completely free, contain no paywalls, and are written from a buyer's perspective (not an insurance sales pitch). They complement the existing resources on your page by addressing the insurance decision specifically.\n\nWould you consider adding either or both to your resource list?\n\nThank you for maintaining such a useful page — it's clearly helping a lot of people.\n\nBest,\nAgency Cyber Insurance\nAgencyCyberInsurance.com",
       "template_used": "resource_page"
     },
@@ -240,8 +240,8 @@
     "reject_reason": null
   },
   {
-    "id": "ea1863cf-998c-4e65-a4f9-173f40468640",
-    "created": "2026-04-16T11:55:22.831202+00:00",
+    "id": "dd257835-be77-4a17-b09b-3270a2fef5fa",
+    "created": "2026-04-16T12:04:46.378519+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -260,8 +260,8 @@
     "reject_reason": null
   },
   {
-    "id": "c1ada04d-eb36-4368-a0dd-341a73d8ee7a",
-    "created": "2026-04-16T11:55:22.832444+00:00",
+    "id": "4428b04a-06a6-4818-a6bb-da9aaf5b7c9e",
+    "created": "2026-04-16T12:04:46.379637+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -280,8 +280,8 @@
     "reject_reason": null
   },
   {
-    "id": "e13cd330-0e55-4683-b082-23e9f29f4682",
-    "created": "2026-04-16T11:55:22.833553+00:00",
+    "id": "6d467f9d-ff72-4d51-aae6-a58cc0ad33ec",
+    "created": "2026-04-16T12:04:46.380760+00:00",
     "status": "pending",
     "prospect": {
       "name": "",
@@ -291,7 +291,7 @@
       "da_estimate": 0
     },
     "email": {
-      "subject": "Thanks for Including My Quote — Happy to Help Again",
+      "subject": "Loved the Final Piece — Available for Future cyber insurance Stories",
       "body": "Hi there,\n\nJust saw that my quote made it into your piece \"your recent article\" — thanks for including me. The final article turned out great, especially the section on the key findings.\n\nI shared it with my network on [LinkedIn/Twitter] — always happy to amplify good journalism on cyber insurance topics.\n\nA couple of things in case they're useful for future stories:\n\n1. **Standing source offer:** I'm always available for quotes on cyber insurance, cybersecurity for small businesses, and digital agency risk management. I can usually turn around responses within a few hours.\n\n2. **Data resource:** I maintain a research library at AgencyCyberInsurance.com with original data on cyber insurance costs, provider comparisons, and claims analysis across 21 published guides. Happy to pull specific data points for any future pieces you're working on.\n\n3. **Story ideas** (no pressure, just planting seeds):\n   - The growing gap between what cyber insurance covers and what small businesses think it covers\n   - Why funds transfer fraud (29–39% of all cyber claims) is the threat most businesses aren't insured for\n   - The real cost of cyber insurance for small businesses in 2026 (spoiler: it's more affordable than most think — $1,500–$4,000/year)\n\nEither way, thanks again for the inclusion. Looking forward to reading more of your work.\n\nBest,\nAgency Cyber Insurance\nFounder, AgencyCyberInsurance.com\nhttps://agencycyberinsurance.com",
       "template_used": "expert_quote"
     },
@@ -300,8 +300,8 @@
     "reject_reason": null
   },
   {
-    "id": "c571c52f-be44-4ead-846a-2cc875588ea2",
-    "created": "2026-04-16T11:55:22.835025+00:00",
+    "id": "f30eb2f7-be44-4fe3-a19f-205e36cb4e55",
+    "created": "2026-04-16T12:04:46.387728+00:00",
     "status": "pending",
     "prospect": {
       "name": "",

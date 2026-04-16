@@ -844,3 +844,38 @@ The following data informed the decision to pursue niche affiliate sites over ot
 ## Next Steps
 - ~~Step 9: Backlink outreach campaign~~ ✅ COMPLETE (2026-04-15)
 - Step 10: Email/newsletter system setup
+
+
+### Step 10 Traffic Gate: Newsletter System
+
+**Status:** GATED — Do not build until traffic thresholds are met.
+
+**Rationale:** A newsletter requires consistent content and an engaged audience.
+Building it before traffic exists wastes effort on infrastructure nobody uses.
+The outreach system (Step 9) and content library (Step 7) must drive organic
+traffic first.
+
+**Activation Triggers (ANY 2 of 3 must be met):**
+
+| Metric | Threshold | How to Measure |
+|--------|-----------|----------------|
+| Monthly organic sessions | ≥ 1,000 | GA4 → Reports → Acquisition → Organic Search |
+| Weekly unique visitors | ≥ 300 | GA4 → Reports → Engagement → Overview |
+| Tool usage (Recommendation Engine) | ≥ 50 completions/month | GA4 → Events → tool_complete |
+
+**Secondary Indicators (supporting evidence):**
+- Google Search Console impressions > 10,000/month
+- At least 3 articles ranking on page 1 for target keywords
+- Affiliate link clicks > 100/month (GA4 → Events → affiliate_click)
+
+**When Triggered, Build:**
+1. Email capture form (exit-intent + inline article CTAs)
+2. Welcome sequence (5-email drip via Brevo)
+3. Weekly digest automation (curated cyber insurance news)
+4. Lead magnet PDF ("Agency Cyber Insurance Buyer's Checklist")
+
+**Estimated Build Time:** 4-6 hours
+**Monthly Cost:** $0 (Brevo free tier: 300 emails/day)
+
+**Review Schedule:** Check metrics monthly. When 2 of 3 triggers are met,
+proceed immediately with build.

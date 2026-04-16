@@ -1,1 +1,322 @@
-[]
+[
+  {
+    "id": "ee77196b-d7ba-444d-812b-ebe16929b841",
+    "created": "2026-04-16T08:58:04.548339+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "secureblitz.com",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "body": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "82213aee-9596-4d39-9a5f-7a84be6b0468",
+    "created": "2026-04-16T08:58:04.552782+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "cybersafetyzone.com",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "body": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "4510cdd0-40c8-42db-baa8-d4617b5d9c04",
+    "created": "2026-04-16T08:58:04.553765+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "cybertechnologyinsights.com",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "body": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "dd35a558-f017-407b-8a42-3bac23754fd3",
+    "created": "2026-04-16T08:58:04.555364+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "loginradius.com",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "body": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "379589b0-6206-4944-922b-67833e5931c7",
+    "created": "2026-04-16T08:58:04.556661+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "lmeservices.com",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "body": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "debcdd83-6489-4765-8a0c-e8a0ebcd43cc",
+    "created": "2026-04-16T08:58:04.557819+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "cybersecuritymag.com",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "body": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "195bc4d6-95f4-4210-9fd3-7511391e525d",
+    "created": "2026-04-16T08:58:04.559039+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "thereviewhive.blog",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Pitch: The Cyber Risk Hiding in Every Agency's Client Contracts",
+      "body": "Pitch: The Cyber Risk Hiding in Every Agency's Client Contracts",
+      "template_used": "guest_post_agency"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "44748015-c779-4758-a87d-ba767c537ef8",
+    "created": "2026-04-16T08:58:04.560641+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "any.run",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "body": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "8383b892-5aed-42ca-ad95-bbd7da02a2be",
+    "created": "2026-04-16T08:58:04.562138+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "clouddefense.ai",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "body": "Column Pitch: What Cyber Insurers Actually Look For (From the Buyer's Side)",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "247819cf-4c15-41fd-b925-e44224131df0",
+    "created": "2026-04-16T08:58:04.567025+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "thesslstore.com",
+      "type": "guest_post",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "body": "Guest Post — The Insurance Underwriting Checklist Your Readers Don't Know About",
+      "template_used": "guest_post_cybersecurity"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "704161e8-eca4-4eea-85f1-da134a5b20ef",
+    "created": "2026-04-16T08:58:22.400094+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "concklin.com",
+      "type": "resource_page",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Resource Suggestion for concklin.com — Free Cyber Insurance Tool for Small Businesses",
+      "body": "Resource Suggestion for concklin.com — Free Cyber Insurance Tool for Small Businesses",
+      "template_used": "resource_page"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "1ccc909f-6530-49dc-962e-7739c422df0f",
+    "created": "2026-04-16T08:58:22.405188+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "cyberdegrees.org",
+      "type": "resource_page",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Addition for Your cyber insurance Resource Page — Agency Cyber Insurance Guide",
+      "body": "Addition for Your cyber insurance Resource Page — Agency Cyber Insurance Guide",
+      "template_used": "resource_page"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "335b739e-54dd-46c3-858e-f132422aee25",
+    "created": "2026-04-16T08:58:22.408313+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "embroker.com",
+      "type": "resource_page",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Addition for Your cyber insurance Resource Page — Agency Cyber Insurance Guide",
+      "body": "Addition for Your cyber insurance Resource Page — Agency Cyber Insurance Guide",
+      "template_used": "resource_page"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "d854dc2e-6308-4e10-bd8b-0e5307ae1b94",
+    "created": "2026-04-16T08:58:22.413078+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "qwoted.com",
+      "type": "haro",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Loved the Final Piece — Available for Future cyber insurance Stories",
+      "body": "Loved the Final Piece — Available for Future cyber insurance Stories",
+      "template_used": "expert_quote"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "336d1970-6aed-40c8-8a98-434179c17ec5",
+    "created": "2026-04-16T08:58:22.415183+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "helpareporter.com",
+      "type": "haro",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Loved the Final Piece — Available for Future cyber insurance Stories",
+      "body": "Loved the Final Piece — Available for Future cyber insurance Stories",
+      "template_used": "expert_quote"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  },
+  {
+    "id": "014387f6-ca83-47e7-bc92-034ee31da2b1",
+    "created": "2026-04-16T08:58:22.417026+00:00",
+    "status": "pending",
+    "prospect": {
+      "name": "",
+      "email": "",
+      "site": "featured.com",
+      "type": "haro",
+      "da_estimate": 0
+    },
+    "email": {
+      "subject": "Thanks for Including My Quote — Happy to Help Again",
+      "body": "Thanks for Including My Quote — Happy to Help Again",
+      "template_used": "expert_quote"
+    },
+    "followup_number": 0,
+    "sent_at": null,
+    "reject_reason": null
+  }
+]

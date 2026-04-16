@@ -31,7 +31,9 @@ from typing import Any, Optional
 # Paths
 # ---------------------------------------------------------------------------
 OUTREACH_DIR = Path(__file__).resolve().parent.parent
-CONFIG_PATH = OUTREACH_DIR / "config.json"
+# Load local config (real keys) first, fall back to template
+LOCAL_CONFIG = OUTREACH_DIR / "config.local.json"
+CONFIG_PATH = LOCAL_CONFIG if LOCAL_CONFIG.exists() else OUTREACH_DIR / "config.json"
 QUEUE_PATH = OUTREACH_DIR / "data" / "queue.json"
 SENT_LOG_PATH = OUTREACH_DIR / "data" / "sent_log.json"
 
@@ -142,7 +144,7 @@ def send_email(
                 server.ehlo()
                 server.starttls()
                 server.ehlo()
-                server.login(brevo["sender_email"], brevo["api_key"])
+                server.login(brevo.get("smtp_login", brevo["sender_email"]), brevo.get("smtp_key", brevo["api_key"]))
                 server.send_message(msg)
             print(f"  SENT → {to_email} (attempt {attempt})")
             return True

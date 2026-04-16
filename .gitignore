@@ -40,3 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 outreach/scripts/__pycache__/
+
+# Outreach secrets and data
+outreach/config.local.json
+outreach/data/*.json

@@ -1,7 +1,8 @@
 ## Behavioral Rules
+*   ALWAYS leverage the FULL potential of all available skills and tools (Crawl4AI, search_engine, document_query, 58+ skills). This is a PERMANENT operational rule.
+*   Never default to manual or limited approaches when automated, skill-based solutions exist.
+*   Systematically check available skills before attempting workarounds.
 *   Favor Linux commands over Python for simple tasks.
-*   Leverage full model capabilities (reasoning, code, context, creative evaluation).
-*   Always utilize vision capabilities for quality assurance before delivery.
 
 ## Visual Quality & Verification
 *   **Model:** Use flux/dev (NOT flux/schnell) for photorealism.

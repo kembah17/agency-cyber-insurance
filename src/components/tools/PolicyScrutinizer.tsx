@@ -820,10 +820,235 @@ export default function PolicyScrutinizer() {
     trackToolUsage("policy_scrutinizer", "restarted");
   }, []);
 
-  const handlePrintReport = useCallback(() => {
+  const handlePrintReport = useCallback(async () => {
+    if (!summary) return;
     trackToolUsage("policy_scrutinizer", "pdf_downloaded");
-    window.print();
-  }, []);
+
+    const { default: jsPDF } = await import("jspdf");
+    const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 20;
+    const contentWidth = pageWidth - margin * 2;
+    let y = margin;
+
+    const checkPageBreak = (needed: number) => {
+      if (y + needed > pageHeight - 25) {
+        doc.addPage();
+        y = margin;
+      }
+    };
+
+    // Title
+    doc.setFontSize(22);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(10, 22, 40); // Navy
+    doc.text("Cyber Insurance Policy Analysis Report", margin, y);
+    y += 10;
+
+    // Date
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(107, 114, 128); // Gray
+    doc.text(
+      `Generated on ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}`,
+      margin,
+      y
+    );
+    y += 10;
+
+    // Divider
+    doc.setDrawColor(13, 148, 136); // Teal
+    doc.setLineWidth(0.5);
+    doc.line(margin, y, pageWidth - margin, y);
+    y += 10;
+
+    // Coverage Score
+    const scoreLabel =
+      summary.overallScore >= 80
+        ? "Excellent"
+        : summary.overallScore >= 60
+          ? "Good"
+          : summary.overallScore >= 40
+            ? "Fair"
+            : summary.overallScore >= 20
+              ? "Weak"
+              : "Poor";
+    doc.setFontSize(16);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(10, 22, 40);
+    doc.text(
+      `Coverage Score: ${summary.overallScore}/100 - ${scoreLabel}`,
+      margin,
+      y
+    );
+    y += 12;
+
+    // Coverage Summary Stats
+    doc.setFontSize(12);
+    doc.setFont("helvetica", "bold");
+    doc.text("Coverage Summary", margin, y);
+    y += 7;
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(55, 65, 81);
+    doc.text(`Areas Covered: ${summary.covered.length}`, margin, y);
+    y += 5;
+    doc.text(`Gaps Found: ${summary.gaps.length}`, margin, y);
+    y += 5;
+    doc.text(
+      `Critical: ${summary.criticalGaps}  |  High: ${summary.highGaps}  |  Medium: ${summary.mediumGaps}  |  Low: ${summary.lowGaps}`,
+      margin,
+      y
+    );
+    y += 12;
+
+    // Gap Analysis Table
+    if (summary.gaps.length > 0) {
+      doc.setFontSize(14);
+      doc.setFont("helvetica", "bold");
+      doc.setTextColor(10, 22, 40);
+      doc.text("Gap Analysis", margin, y);
+      y += 8;
+
+      // Table header
+      const colWidths = [42, 18, 35, 28, contentWidth - 123];
+      const headers = ["Area Name", "Severity", "Category", "Exposure", "Recommendation"];
+
+      doc.setFillColor(10, 22, 40);
+      doc.rect(margin, y, contentWidth, 8, "F");
+      doc.setFontSize(8);
+      doc.setFont("helvetica", "bold");
+      doc.setTextColor(255, 255, 255);
+      let xPos = margin + 2;
+      headers.forEach((header, i) => {
+        doc.text(header, xPos, y + 5.5);
+        xPos += colWidths[i];
+      });
+      y += 10;
+
+      // Table rows
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(7);
+
+      summary.gaps.forEach((gap, index) => {
+        const recLines = doc.splitTextToSize(gap.area.recommendation, colWidths[4] - 4);
+        const rowHeight = Math.max(recLines.length * 3.5 + 3, 8);
+        checkPageBreak(rowHeight + 2);
+
+        if (index % 2 === 0) {
+          doc.setFillColor(249, 250, 251);
+          doc.rect(margin, y - 1, contentWidth, rowHeight, "F");
+        }
+
+        doc.setTextColor(55, 65, 81);
+        xPos = margin + 2;
+
+        const nameLines = doc.splitTextToSize(gap.area.name, colWidths[0] - 4);
+        doc.text(nameLines, xPos, y + 3);
+        xPos += colWidths[0];
+
+        // Severity with color
+        const sevColors: Record<string, [number, number, number]> = {
+          Critical: [185, 28, 28],
+          High: [194, 65, 12],
+          Medium: [161, 98, 7],
+          Low: [29, 78, 216],
+        };
+        const sevColor = sevColors[gap.area.severity] || [55, 65, 81];
+        doc.setTextColor(...sevColor);
+        doc.setFont("helvetica", "bold");
+        doc.text(gap.area.severity, xPos, y + 3);
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(55, 65, 81);
+        xPos += colWidths[1];
+
+        const catLabel =
+          gap.area.category === "first-party"
+            ? "First-Party"
+            : gap.area.category === "third-party"
+              ? "Third-Party"
+              : "Policy Terms";
+        doc.text(catLabel, xPos, y + 3);
+        xPos += colWidths[2];
+
+        doc.text(gap.area.financialExposure, xPos, y + 3);
+        xPos += colWidths[3];
+
+        doc.text(recLines, xPos, y + 3);
+
+        y += rowHeight;
+      });
+      y += 8;
+    }
+
+    // Covered Areas
+    if (summary.covered.length > 0) {
+      checkPageBreak(20);
+      doc.setFontSize(14);
+      doc.setFont("helvetica", "bold");
+      doc.setTextColor(10, 22, 40);
+      doc.text(`Covered Areas (${summary.covered.length})`, margin, y);
+      y += 8;
+
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "normal");
+      doc.setTextColor(55, 65, 81);
+
+      summary.covered.forEach((item) => {
+        checkPageBreak(6);
+        doc.text(
+          `\u2713  ${item.area.name} (${item.matchedKeywords.length} keyword${item.matchedKeywords.length !== 1 ? "s" : ""} matched)`,
+          margin + 2,
+          y
+        );
+        y += 5;
+      });
+      y += 8;
+    }
+
+    // Disclaimer
+    checkPageBreak(30);
+    doc.setDrawColor(200, 200, 200);
+    doc.setLineWidth(0.3);
+    doc.line(margin, y, pageWidth - margin, y);
+    y += 6;
+    doc.setFontSize(8);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(107, 114, 128);
+    doc.text("Disclaimer", margin, y);
+    y += 4;
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7);
+    const disclaimerText =
+      "This report is for informational purposes only and does not constitute professional insurance, legal, or financial advice. " +
+      "The analysis uses keyword matching and may not capture all policy nuances. Coverage determinations depend on specific policy language, " +
+      "endorsements, exclusions, and applicable law. Always consult with a licensed insurance broker or attorney for definitive coverage analysis.";
+    const disclaimerLines = doc.splitTextToSize(disclaimerText, contentWidth);
+    doc.text(disclaimerLines, margin, y);
+    y += disclaimerLines.length * 3.5 + 6;
+
+    // Footer on every page
+    const totalPages = doc.getNumberOfPages();
+    for (let i = 1; i <= totalPages; i++) {
+      doc.setPage(i);
+      doc.setFontSize(8);
+      doc.setFont("helvetica", "normal");
+      doc.setTextColor(107, 114, 128);
+      doc.text(
+        "Generated by AgencyCyberInsurance.com Policy Scrutinizer",
+        margin,
+        pageHeight - 10
+      );
+      doc.text(
+        `Page ${i} of ${totalPages}`,
+        pageWidth - margin - 20,
+        pageHeight - 10
+      );
+    }
+
+    doc.save("policy-analysis-report.pdf");
+  }, [summary]);
 
   /* ---------- Analyzing state ---------- */
   if (analyzing) {
@@ -1085,7 +1310,7 @@ export default function PolicyScrutinizer() {
                   identifying exactly which controls will lower your costs.
                 </p>
                 <a
-                  href="/contact?ref=scrutinizer-upsell"
+                  href="/pricing"
                   onClick={() => trackCTAClick("security_audit_upsell", "Get Your Security Assessment", "scrutinizer")}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-teal text-white font-semibold rounded-lg hover:bg-teal/90 transition-colors"
                 >

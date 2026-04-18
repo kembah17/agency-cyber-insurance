@@ -7,6 +7,7 @@ import {
 import {
   createMetadata,
   getArticleJsonLd,
+  getAudioObjectJsonLd,
   getBreadcrumbJsonLd,
   getFAQJsonLd,
   SITE_URL,
@@ -20,6 +21,7 @@ import AuthorBox from "@/components/AuthorBox";
 import { TOCItem } from "@/lib/types";
 import ArticleTracker from "@/components/ArticleTracker";
 import AudioPlayer from "@/components/AudioPlayer";
+import { audioDurations } from "@/lib/audio-durations";
 
 interface PageProps {
   params: Promise<{ slug: string }>;

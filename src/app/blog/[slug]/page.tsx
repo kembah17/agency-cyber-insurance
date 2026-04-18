@@ -9,6 +9,7 @@ import {
 import {
   createMetadata,
   getArticleJsonLd,
+  getAudioObjectJsonLd,
   getBreadcrumbJsonLd,
   getFAQJsonLd,
   SITE_URL,
@@ -24,6 +25,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import { TOCItem } from "@/lib/types";
 import ArticleTracker from "@/components/ArticleTracker";
 import AudioPlayer from "@/components/AudioPlayer";
+import { audioDurations } from "@/lib/audio-durations";
 
 interface PageProps {
   params: Promise<{ slug: string }>;

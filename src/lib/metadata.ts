@@ -153,3 +153,44 @@ export function getFAQJsonLd(
 }
 
 export { SITE_URL, SITE_NAME, SITE_DESCRIPTION };
+
+
+export function getAudioObjectJsonLd({
+  title,
+  description,
+  slug,
+  date,
+  duration,
+  pageType = "blog",
+}: {
+  title: string;
+  description: string;
+  slug: string;
+  date: string;
+  duration: string;
+  pageType?: "blog" | "compare";
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AudioObject",
+    name: title,
+    description,
+    contentUrl: `${SITE_URL}/audio/${slug}.mp3`,
+    encodingFormat: "audio/mpeg",
+    duration,
+    author: {
+      "@type": "Organization",
+      name: "Agency Cyber Insurance",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Agency Cyber Insurance",
+    },
+    inLanguage: "en",
+    datePublished: date,
+    isPartOf: {
+      "@type": "WebPage",
+      url: `${SITE_URL}/${pageType}/${slug}`,
+    },
+  };
+}

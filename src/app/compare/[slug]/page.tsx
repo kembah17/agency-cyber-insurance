@@ -19,6 +19,7 @@ import JsonLd from "@/components/JsonLd";
 import AuthorBox from "@/components/AuthorBox";
 import { TOCItem } from "@/lib/types";
 import ArticleTracker from "@/components/ArticleTracker";
+import AudioPlayer from "@/components/AudioPlayer";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -134,6 +135,11 @@ export default async function ComparisonPage({ params }: PageProps) {
         {/* Affiliate Disclosure */}
         <div className="mb-8 max-w-3xl">
           <AffiliateDisclosure />
+        </div>
+
+        {/* Audio Player */}
+        <div className="mb-8 max-w-3xl">
+          <AudioPlayer src={`/audio/${slug}.mp3`} />
         </div>
 
         {/* Content Layout */}

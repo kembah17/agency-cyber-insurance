@@ -23,6 +23,7 @@ import JsonLd from "@/components/JsonLd";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { TOCItem } from "@/lib/types";
 import ArticleTracker from "@/components/ArticleTracker";
+import AudioPlayer from "@/components/AudioPlayer";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -180,6 +181,11 @@ export default async function BlogPostPage({ params }: PageProps) {
             <AffiliateDisclosure />
           </div>
         )}
+
+        {/* Audio Player */}
+        <div className="mb-8 max-w-3xl">
+          <AudioPlayer src={`/audio/${slug}.mp3`} />
+        </div>
 
         {/* Content Layout */}
         <div className="flex gap-8">

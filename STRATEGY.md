@@ -897,3 +897,29 @@ proceed immediately with build.
 
 **Revenue Model:** Freemium — free basic analysis drives email capture,
 full report includes affiliate provider recommendations.
+
+
+## Video Content Gates
+
+### Tier 1: Audio Player (DEPLOYED)
+- **Status:** Live on all 21 article pages
+- **Tool:** edge-tts (en-US-JennyNeural)
+- **Cost:** $0/article
+- **Trigger:** Immediate deployment — COMPLETE
+
+### Tier 2: Slideshow Video (READY)
+- **Status:** Test v2 complete, ready for 5 cornerstone articles
+- **Tool:** fal.ai Flux/dev images + ffmpeg compositing + edge-tts voiceover
+- **Cost:** ~$0.05-0.15/video
+- **Trigger:** Deploy on top 5 articles when GA4 shows 500+ monthly visits
+- **Distribution:** Host on YouTube for SEO backlinks + embed on page with VideoObject schema
+
+### Tier 3: Talking Head (GATED)
+- **Status:** Skipped — quality insufficient with free tools (SadTalker = 256x256, uncanny valley)
+- **Required upgrade:** D-ID API ($5.99/mo) for 1024x1024+ resolution, natural lip sync
+- **Cost:** ~$6/mo subscription
+- **Trigger:** Deploy ONLY when ALL conditions met:
+  1. Monthly traffic exceeds 2,000 visits (GA4 verified)
+  2. Monthly affiliate revenue covers D-ID subscription cost ($6+)
+  3. Top 5 cornerstone articles already have Tier 2 videos
+- **Apply to:** Maximum 5 cornerstone articles only

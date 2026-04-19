@@ -22,6 +22,8 @@ import { TOCItem } from "@/lib/types";
 import ArticleTracker from "@/components/ArticleTracker";
 import AudioPlayer from "@/components/AudioPlayer";
 import { audioDurations } from "@/lib/audio-durations";
+import { pillarVideos } from "@/lib/pillar-videos";
+import ArticleVideo from "@/components/ArticleVideo";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -71,6 +73,8 @@ export default async function ComparisonPage({ params }: PageProps) {
 
   const tocItems = extractTOC(comparison.content);
   const wordCount = comparison.content.split(/\s+/).length;
+
+  const pillarVideo = pillarVideos[slug];
 
   const formattedDate = new Date(comparison.meta.date).toLocaleDateString(
     "en-US",
@@ -143,6 +147,21 @@ export default async function ComparisonPage({ params }: PageProps) {
         <div className="mb-8 max-w-3xl">
           <AudioPlayer src={`/audio/${slug}.mp3`} />
         </div>
+
+        {/* Pillar Video */}
+        {pillarVideo && (
+          <div className="mb-8 max-w-3xl">
+            <ArticleVideo
+              videoSrc={pillarVideo.videoSrc}
+              posterSrc={pillarVideo.posterSrc}
+              title={pillarVideo.title}
+              description={pillarVideo.description}
+              duration={pillarVideo.duration}
+              uploadDate={pillarVideo.uploadDate}
+              articleUrl={`/compare/${slug}`}
+            />
+          </div>
+        )}
 
         {/* Content Layout */}
         <div className="flex gap-8">

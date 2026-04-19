@@ -44,3 +44,11 @@ outreach/scripts/__pycache__/
 # Outreach secrets and data
 outreach/config.local.json
 outreach/data/*.json
+
+# Video production working files
+public/videos/pillar/work/
+public/videos/pillar/qa_frames/
+public/videos/explainer_work/
+public/audio/sections/
+public/audio/explainer-v2-synced.mp3
+public/audio/explainer-v2-voiceover.mp3

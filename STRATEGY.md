@@ -53,12 +53,13 @@ This project builds a niche affiliate website targeting **cyber liability insura
 
 | Item | Priority | Blocker |
 |------|----------|---------|
-| Domain name selection | 🔴 Critical | User decision required |
-| Brand identity creation | 🔴 Critical | Depends on domain |
-| Site scaffold & deployment | 🟡 High | Depends on brand identity |
-| First article batch | 🟡 High | Depends on site scaffold |
-| Affiliate program applications | 🟡 High | Depends on live site with content |
-| Email/newsletter system | 🟢 Medium | Can be added post-launch |
+| Stripe payment configuration | 🔴 Critical | Env vars needed on Vercel |
+| Video content pipeline upgrade | 🔴 Critical | Research in progress — studying Pictory.ai methods |
+| Step 10: Newsletter system | 🟡 Gated | Traffic thresholds not yet met (0 organic traffic) |
+| Tier 2 slideshow deployment | 🟡 Gated | Waiting for 500+ monthly visits |
+| Affiliate program applications | 🟡 High | Apply once traffic established |
+| Outreach email activation | 🟢 Medium | Brevo configured, queue ready |
+| Namecheap email migration | 🟢 Medium | User planning migration from Gmail |
 
 ---
 
@@ -588,34 +589,43 @@ Pass 3: Voice & Personality
 
 ---
 
-## 12. Pending Decisions
+## 12. Pending Decisions & Next Actions
 
-The following items require user input before implementation can begin:
+### ✅ Resolved Decisions
 
-### 🔴 Critical (Blocks Week 1)
+| Decision | Resolution | Date |
+|----------|-----------|------|
+| Domain name | agencycyberinsurance.com | 2026-04-12 |
+| Brand name | Agency Cyber Insurance (agency persona voice) | 2026-04-12 |
+| Author identity | Agency persona — "we" voice, no individual face | 2026-04-12 |
+| Brand visual direction | Professional/modern — glass shield logo, navy/teal palette | 2026-04-12 |
+| Content voice | Conversational expert — buyer perspective | 2026-04-13 |
+| Pricing model | Free + Premium ($39 one-time) via Stripe | 2026-04-16 |
+
+### 🔴 Active Priorities
+
+| Decision | Status | Impact |
+|----------|--------|--------|
+| **Video content pipeline** | Researching AI video tools (Pictory.ai methods) to upgrade Tier 2/3 | Critical for SEO + marketing |
+| **Stripe env vars on Vercel** | Not yet configured — payment system not live | Blocks Premium Report revenue |
+| **Outreach activation** | Brevo configured, queue built — needs first campaign launch | Drives backlinks + traffic |
+
+### 🟡 Gated (Traffic-Dependent)
+
+| Decision | Trigger | Current Status |
+|----------|---------|----------------|
+| Newsletter system (Step 10) | 1,000 monthly sessions OR 300 weekly visitors | 0 traffic — not triggered |
+| Tier 2 video deployment | 500+ monthly visits | 0 traffic — not triggered |
+| Tier 3 talking head | 2,000+ visits + revenue covers D-ID cost | Not triggered |
+| Affiliate program applications | Live site with traffic proof | Apply after traffic established |
+
+### 🟢 Future Planning
 
 | Decision | Options/Considerations | Impact |
 |----------|----------------------|--------|
-| **Domain name** | Should reflect cyber insurance + agency angle; .com preferred; check availability | Affects brand, SEO, memorability |
-| **Brand name** | Can match domain or be distinct; should convey trust + agency identity | Affects all content, author bio, positioning |
-| **Author identity** | Real name or pen name? Which team member is the "face"? | Affects E-E-A-T, author bio, LinkedIn presence |
-
-### 🟡 High Priority (Blocks Week 2–3)
-
-| Decision | Options/Considerations | Impact |
-|----------|----------------------|--------|
-| **Brand visual direction** | Professional/corporate vs. modern/startup vs. friendly/approachable | Affects design, tone, audience perception |
-| **Content voice** | Formal professional vs. conversational expert vs. casual peer | Affects all content production |
-| **Initial affiliate programs to target** | Research specific programs; some require application with live site | Affects monetization timeline |
-
-### 🟢 Medium Priority (Can be decided during implementation)
-
-| Decision | Options/Considerations | Impact |
-|----------|----------------------|--------|
-| **Newsletter name/angle** | Separate brand or sub-brand of main site | Affects email marketing strategy |
-| **Social media strategy** | Which platforms to prioritize (LinkedIn likely best for B2B) | Affects content distribution |
-| **Adjacent niche expansion** | E&O insurance? Professional liability? General agency risk? | Affects Year 2 content strategy |
-| **Paid promotion budget** | Any budget for initial traffic/link building? | Affects growth speed |
+| Adjacent niche expansion | E&O insurance? Professional liability? Scrutinizer spinoffs (HIPAA, SOC 2)? | Year 2 content strategy |
+| Social media strategy | LinkedIn likely best for B2B agency audience | Content distribution |
+| Namecheap email migration | Move from ihe100@gmail.com to branded email | Professional credibility |
 
 ---
 

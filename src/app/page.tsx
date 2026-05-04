@@ -93,6 +93,102 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Video Explainer Section */}
+      <section className="py-12 md:py-16 bg-navy">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+              Why Digital Agencies Need Cyber Insurance
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              60% of small businesses close within 6 months of a cyber attack.
+              Watch our 43-second explainer to understand the risks and how to
+              protect your agency.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <video
+              className="max-w-4xl w-full mx-auto rounded-lg shadow-2xl"
+              controls
+              preload="metadata"
+              playsInline
+              poster="/videos/explainer-v3-poster.jpg"
+            >
+              <source
+                src="/videos/cyber-liability-insurance-digital-agencies-explainer-v3-1080p.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              name: "Cyber Liability Insurance for Digital Agencies - Complete Guide",
+              description:
+                "60% of small businesses close within 6 months of a cyber attack. Learn what cyber liability insurance covers and find the right policy for your digital agency.",
+              thumbnailUrl:
+                "https://www.agencycyberinsurance.com/videos/explainer-v3-poster.jpg",
+              uploadDate: "2026-04-19",
+              duration: "PT43S",
+              contentUrl:
+                "https://www.agencycyberinsurance.com/videos/cyber-liability-insurance-digital-agencies-explainer-v3-1080p.mp4",
+              publisher: {
+                "@type": "Organization",
+                name: "Agency Cyber Insurance",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://www.agencycyberinsurance.com/logo.png",
+                },
+              },
+              hasPart: [
+                {
+                  "@type": "Clip",
+                  name: "Hook — 60% of businesses close after attack",
+                  startOffset: 0,
+                  endOffset: 6,
+                },
+                {
+                  "@type": "Clip",
+                  name: "Problem — Real risks facing digital agencies",
+                  startOffset: 6,
+                  endOffset: 13,
+                },
+                {
+                  "@type": "Clip",
+                  name: "Bridge — What cyber insurance actually covers",
+                  startOffset: 13,
+                  endOffset: 21,
+                },
+                {
+                  "@type": "Clip",
+                  name: "Solution — Finding the right policy",
+                  startOffset: 21,
+                  endOffset: 31,
+                },
+                {
+                  "@type": "Clip",
+                  name: "Proof — Why agencies trust our recommendations",
+                  startOffset: 31,
+                  endOffset: 41,
+                },
+                {
+                  "@type": "Clip",
+                  name: "CTA — Get protected today",
+                  startOffset: 41,
+                  endOffset: 43,
+                },
+              ],
+            }),
+          }}
+        />
+      </section>
+
+
       {/* Trust Signals */}
       <section className="border-b border-gray-200 bg-warm-gray-lightest">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6">

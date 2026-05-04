@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllPosts, getAllComparisons } from "@/lib/content";
 import { pillarVideos } from "@/lib/pillar-videos";
 
-const SITE_URL = "https://agencycyberinsurance.com";
+const SITE_URL = "https://www.agencycyberinsurance.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();

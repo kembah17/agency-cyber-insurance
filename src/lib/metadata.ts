@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const SITE_URL = "https://www.agencycyberinsurance.com";
+const SITE_URL = "https://agencycyberinsurance.com";
 const SITE_NAME = "AgencyCyberInsurance";
 const SITE_DESCRIPTION =
   "Cyber insurance decoded by the agencies who buy it. Expert cyber liability insurance guidance for digital agencies — compare policies, understand coverage, and protect your agency from cyber threats.";

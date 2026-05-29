@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Pricing - Free & Premium Cyber Insurance Analysis",
     description:
       "Analyze your cyber insurance policy for free or unlock a detailed 27-area gap analysis with our Premium Report. One-time $39.",
-    url: "https://www.agencycyberinsurance.com/pricing",
+    url: "https://agencycyberinsurance.com/pricing",
   },
 };
 

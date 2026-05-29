@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://www.agencycyberinsurance.com/sitemap.xml",
+    sitemap: "https://agencycyberinsurance.com/sitemap.xml",
   };
 }

@@ -132,17 +132,17 @@ export default function HomePage() {
               description:
                 "60% of small businesses close within 6 months of a cyber attack. Learn what cyber liability insurance covers and find the right policy for your digital agency.",
               thumbnailUrl:
-                "https://www.agencycyberinsurance.com/videos/explainer-v3-poster.jpg",
+                "https://agencycyberinsurance.com/videos/explainer-v3-poster.jpg",
               uploadDate: "2026-04-19",
               duration: "PT43S",
               contentUrl:
-                "https://www.agencycyberinsurance.com/videos/cyber-liability-insurance-digital-agencies-explainer-v3-1080p.mp4",
+                "https://agencycyberinsurance.com/videos/cyber-liability-insurance-digital-agencies-explainer-v3-1080p.mp4",
               publisher: {
                 "@type": "Organization",
                 name: "Agency Cyber Insurance",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://www.agencycyberinsurance.com/logo.png",
+                  url: "https://agencycyberinsurance.com/logo.png",
                 },
               },
               hasPart: [

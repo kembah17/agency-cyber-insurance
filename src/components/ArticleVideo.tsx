@@ -2,7 +2,7 @@
 
 import JsonLd from "@/components/JsonLd";
 
-const SITE_URL = "https://www.agencycyberinsurance.com";
+const SITE_URL = "https://agencycyberinsurance.com";
 
 interface ArticleVideoProps {
   videoSrc: string;

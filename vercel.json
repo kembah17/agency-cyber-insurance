@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "agencycyberinsurance.com"
+        }
+      ],
+      "destination": "https://www.agencycyberinsurance.com/:path*",
+      "permanent": true
+    }
+  ]
+}

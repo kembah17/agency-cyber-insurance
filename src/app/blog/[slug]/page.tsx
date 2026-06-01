@@ -48,8 +48,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     path: `/blog/${slug}`,
     type: "article",
     publishedTime: post.meta.date,
-    modifiedTime: post.meta.updated,
+    modifiedTime: post.meta.update_log?.[0]?.date || post.meta.updated,
     tags: post.meta.tags,
+    noSuffix: true,
   });
 }
 
@@ -92,6 +93,15 @@ export default async function BlogPostPage({ params }: PageProps) {
     day: "numeric",
   });
 
+  const lastUpdatedDate = post.meta.update_log?.[0]?.date || post.meta.updated;
+  const formattedLastUpdated = lastUpdatedDate
+    ? new Date(lastUpdatedDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : null;
+
   const hasAffiliateLinks =
     post.meta.affiliate_links && post.meta.affiliate_links.length > 0;
 
@@ -104,6 +114,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           slug,
           date: post.meta.date,
           updated: post.meta.updated,
+          updateLog: post.meta.update_log,
           image: post.meta.featured_image,
         })}
       />
@@ -151,20 +162,17 @@ export default async function BlogPostPage({ params }: PageProps) {
             <span>By {post.meta.author}</span>
             <span>&middot;</span>
             <time dateTime={post.meta.date}>{formattedDate}</time>
-            {post.meta.updated && post.meta.updated !== post.meta.date && (
-              <>
-                <span>&middot;</span>
-                <span>
-                  Updated{" "}
-                  {new Date(post.meta.updated).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </span>
-              </>
-            )}
           </div>
+
+          {/* Last Updated Badge */}
+          {formattedLastUpdated && formattedLastUpdated !== formattedDate && (
+            <div className="mt-3 inline-flex items-center gap-1.5 text-sm text-teal bg-teal/5 border border-teal/20 px-3 py-1.5 rounded-md">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              <span>Last updated: <time dateTime={lastUpdatedDate}>{formattedLastUpdated}</time></span>
+            </div>
+          )}
         </header>
 
         {/* Featured Image */}
@@ -213,6 +221,35 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Main Content */}
           <div className="flex-1 min-w-0 max-w-3xl">
             <MDXContent source={post.content} />
+
+            {/* Update History */}
+            {post.meta.update_log && post.meta.update_log.length > 0 && (
+              <div className="mt-12 border-t border-gray-200 pt-8">
+                <h2 className="text-xl font-semibold text-navy mb-4 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Update History
+                </h2>
+                <div className="space-y-3">
+                  {post.meta.update_log.map((entry, index) => (
+                    <div key={index} className="flex gap-3 text-sm">
+                      <time
+                        dateTime={entry.date}
+                        className="text-warm-gray-light font-mono whitespace-nowrap min-w-[100px]"
+                      >
+                        {new Date(entry.date).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </time>
+                      <span className="text-warm-gray">{entry.change}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Author Box */}
             <div className="mt-12">

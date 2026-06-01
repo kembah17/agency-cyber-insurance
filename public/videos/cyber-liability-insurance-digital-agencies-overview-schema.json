@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Cyber Liability Insurance for Digital Agencies \u2014 Complete Overview",
+  "description": "Expert guide to cyber liability insurance for digital agencies. Compare 50+ policies from top providers. Understand costs, coverage, and claims processes to protect your agency from cyber threats.",
+  "thumbnailUrl": "https://agencycyberinsurance.com/images/hero-main.jpg",
+  "uploadDate": "2026-04-19",
+  "duration": "PT40S",
+  "contentUrl": "https://agencycyberinsurance.com/videos/cyber-liability-insurance-digital-agencies-overview-1080p.mp4",
+  "embedUrl": "https://agencycyberinsurance.com/videos/cyber-liability-insurance-digital-agencies-overview-1080p.mp4",
+  "author": {
+    "@type": "Organization",
+    "name": "AgencyCyberInsurance.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AgencyCyberInsurance.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://agencycyberinsurance.com/logo.png"
+    }
+  },
+  "inLanguage": "en-US",
+  "transcript": "Protecting your digital agency from cyber threats shouldn't be complicated. We spent months researching over fifty cyber liability insurance policies, so you don't have to start from scratch. Our independent research compares the top providers side by side, breaking down real costs, coverage details, and claims processes. Whether you run a web development shop, an SEO agency, or a full-service digital firm, we'll help you find the right policy. Try our free recommendation engine, or dive into our in-depth guides. Agency Cyber Insurance dot com. Honest comparisons. Real protection."
+}

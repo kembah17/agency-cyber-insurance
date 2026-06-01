@@ -44,12 +44,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     path: `/compare/${slug}`,
     type: "article",
     publishedTime: comparison.meta.date,
-    modifiedTime: comparison.meta.updated,
+    modifiedTime: comparison.meta.update_log?.[0]?.date || comparison.meta.updated,
+    noSuffix: true,
   });
 }
 
 function extractTOC(content: string): TOCItem[] {
-  const headingRegex = /^(#{2,3})+(.+)$/gm;
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
   const items: TOCItem[] = [];
   let match;
 
@@ -85,6 +86,15 @@ export default async function ComparisonPage({ params }: PageProps) {
     }
   );
 
+  const lastUpdatedDate = comparison.meta.update_log?.[0]?.date || comparison.meta.updated;
+  const formattedLastUpdated = lastUpdatedDate
+    ? new Date(lastUpdatedDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : null;
+
   return (
     <>
       <JsonLd
@@ -94,6 +104,7 @@ export default async function ComparisonPage({ params }: PageProps) {
           slug: `compare/${slug}`,
           date: comparison.meta.date,
           updated: comparison.meta.updated,
+          updateLog: comparison.meta.update_log,
         })}
       />
       <JsonLd
@@ -136,6 +147,16 @@ export default async function ComparisonPage({ params }: PageProps) {
             <span>&middot;</span>
             <time dateTime={comparison.meta.date}>{formattedDate}</time>
           </div>
+
+          {/* Last Updated Badge */}
+          {formattedLastUpdated && formattedLastUpdated !== formattedDate && (
+            <div className="mt-3 inline-flex items-center gap-1.5 text-sm text-teal bg-teal/5 border border-teal/20 px-3 py-1.5 rounded-md">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              <span>Last updated: <time dateTime={lastUpdatedDate}>{formattedLastUpdated}</time></span>
+            </div>
+          )}
         </header>
 
         {/* Affiliate Disclosure */}
@@ -167,6 +188,35 @@ export default async function ComparisonPage({ params }: PageProps) {
         <div className="flex gap-8">
           <div className="flex-1 min-w-0 max-w-3xl">
             <MDXContent source={comparison.content} />
+
+            {/* Update History */}
+            {comparison.meta.update_log && comparison.meta.update_log.length > 0 && (
+              <div className="mt-12 border-t border-gray-200 pt-8">
+                <h2 className="text-xl font-semibold text-navy mb-4 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Update History
+                </h2>
+                <div className="space-y-3">
+                  {comparison.meta.update_log.map((entry, index) => (
+                    <div key={index} className="flex gap-3 text-sm">
+                      <time
+                        dateTime={entry.date}
+                        className="text-warm-gray-light font-mono whitespace-nowrap min-w-[100px]"
+                      >
+                        {new Date(entry.date).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </time>
+                      <span className="text-warm-gray">{entry.change}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="mt-12">
               <AuthorBox />

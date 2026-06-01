@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Cyber Liability Insurance for Digital Agencies — Why Your Agency Needs Coverage",
+  "description": "Animated explainer with voiceover showing why digital agencies need cyber liability insurance. Covers breach statistics, coverage details, and independent policy reviews to help agency owners find the right protection.",
+  "thumbnailUrl": "https://agencycyberinsurance.com/videos/hero-animation-source.jpg",
+  "uploadDate": "2026-04-19",
+  "duration": "PT45S",
+  "contentUrl": "https://agencycyberinsurance.com/videos/cyber-liability-insurance-digital-agencies-explainer-final-1080p.mp4",
+  "author": {"@type": "Organization", "name": "AgencyCyberInsurance.com"},
+  "inLanguage": "en-US",
+  "hasPart": [
+    {"@type": "Clip", "name": "Hook — 60% of businesses close after attack", "startOffset": 0, "endOffset": 6},
+    {"@type": "Clip", "name": "Problem — Agencies handle sensitive data daily", "startOffset": 6, "endOffset": 13},
+    {"@type": "Clip", "name": "Bridge — Breach costs $120K-$1.2M", "startOffset": 13, "endOffset": 20},
+    {"@type": "Clip", "name": "Solution — What cyber insurance covers", "startOffset": 20, "endOffset": 30},
+    {"@type": "Clip", "name": "Proof — 50+ policies independently reviewed", "startOffset": 30, "endOffset": 40},
+    {"@type": "Clip", "name": "CTA — Find the right policy", "startOffset": 40, "endOffset": 45}
+  ]
+}

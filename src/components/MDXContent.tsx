@@ -9,6 +9,9 @@ import RatingStars from "./RatingStars";
 import AffiliateLink from "./AffiliateLink";
 import AffiliateDisclosure from "./AffiliateDisclosure";
 import NewsletterSignup from "./NewsletterSignup";
+import ExperienceCallout from "./ExperienceCallout";
+import QuickAnswer from "./QuickAnswer";
+import KeyStat from "./KeyStat";
 
 const components = {
   ComparisonTable,
@@ -18,6 +21,9 @@ const components = {
   AffiliateLink,
   AffiliateDisclosure,
   NewsletterSignup,
+  ExperienceCallout,
+  QuickAnswer,
+  KeyStat,
 };
 
 interface MDXContentProps {

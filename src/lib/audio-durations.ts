@@ -15,7 +15,7 @@ export const audioDurations: Record<string, string> = {
   "cyber-insurance-renewal-guide": "PT59S",
   "cyber-insurance-seo-ppc-agencies": "PT1M5S",
   "cyber-insurance-social-media-agencies": "PT1M2S",
-  "cyber-insurance-trends-2025": "PT1M4S",
+  "cyber-insurance-trends-2026": "PT1M4S",
   "cyber-insurance-web-development-agencies": "PT56S",
   "cyber-security-audit-checklist": "PT52S",
   "does-your-agency-need-cyber-insurance": "PT1M6S",

@@ -16,6 +16,8 @@
 6. [Broken Link Building](#6-broken-link-building)
 7. [Expert Quote Follow-up](#7-expert-quote-follow-up)
 8. [Community Value-Add Introduction](#8-community-value-add-introduction)
+9. [Data Citation Pitch](#9-data-citation-pitch)
+10. [Niche Resource Pitch](#10-niche-resource-pitch)
 
 ---
 
@@ -640,6 +642,171 @@ After the introduction post, engage naturally by:
 
 ---
 
+## 9. Data Citation Pitch
+
+> **Purpose:** Pitch the Cyber Insurance Price Index as a citable data source to journalists, bloggers, and industry publications writing about cyber insurance costs.
+> **Best for:** Insurance trade publications, cybersecurity news sites, business/SMB publications, freelancer publications
+> **Response rate benchmark:** 12–18% (data pitches outperform generic resource pitches by 2–3x)
+
+### Target Publications
+
+| Category | Publications |
+|----------|-------------|
+| Insurance trade | Insurance Journal, Insurance Business America, Carrier Management, Risk & Insurance |
+| Cybersecurity news | Dark Reading, SC Magazine, CSO Online, Cybersecurity Dive |
+| Business/SMB | Inc., Entrepreneur, Forbes Small Business, Business News Daily |
+| Freelancer | Freelancers Union Blog, Millo, Contently, The Freelancer Magazine |
+| Agency | Search Engine Journal, HubSpot Blog, DesignRush, Agency Analytics Blog |
+
+### Subject Line A/B Test
+
+**Version A:** "Data: What agencies actually pay for cyber insurance in 2026"
+**Version B:** "Free citable source — cyber insurance pricing data (6 carriers, updated quarterly)"
+
+### Email Body
+
+```
+Subject: [A/B TEST SUBJECT LINE]
+
+Hi [FIRST NAME],
+
+I noticed your recent piece on [SPECIFIC ARTICLE TOPIC] — [one specific observation about their article that shows you actually read it].
+
+I wanted to flag a data resource that might be useful for your coverage: we just published the Cyber Insurance Price Index for Digital Agencies (2026), tracking actual premium data across 6 major carriers (Coalition, Hiscox, Embroker, Chubb, CFC, At-Bay) by agency size, specialty, and risk tier.
+
+A few data points that surprised us:
+
+- Solo freelancers can get coverage starting at $300/year, but agencies handling HIPAA data pay 40–60% more than general agencies at the same size
+- The gap between the cheapest and most expensive carrier for the same agency profile is often 2–3x
+- Social engineering sublimits ($100K–$250K on a $1M policy) create a major coverage gap that most agencies don't discover until they file a claim
+
+The full dataset is free to reference and cite — no registration, no paywall: https://agencycyberinsurance.com/tools/price-index
+
+We update the data quarterly, so it stays current. Happy to provide additional context, custom data cuts, or expert commentary if you're working on anything related to cyber insurance costs or small business risk.
+
+Best,
+[YOUR NAME]
+[YOUR TITLE]
+AgencyCyberInsurance.com
+```
+
+### Follow-up Email (7 days later)
+
+```
+Subject: Re: [ORIGINAL SUBJECT LINE]
+
+Hi [FIRST NAME],
+
+Quick follow-up on the pricing data I shared last week. One additional data point that's been getting attention:
+
+Agencies with fewer than 10 employees pay $1,500–$4,000/year for cyber insurance, but those that implement MFA, EDR, and immutable backups can reduce premiums by 30–40% — saving $10,000–$50,000 over a 5-year policy period.
+
+The full Price Index breaks this down by carrier and agency size: https://agencycyberinsurance.com/tools/price-index
+
+No pressure at all — just wanted to make sure the resource was on your radar for future coverage. Always happy to be a source on cyber insurance topics.
+
+Best,
+[YOUR NAME]
+```
+
+### Personalization Notes
+
+- [ ] **Always reference a specific recent article** by the recipient — generic pitches get deleted
+- [ ] **Lead with the data, not your site** — journalists care about the numbers, not your brand
+- [ ] **Offer "custom data cuts"** — this positions you as a helpful source, not a link-seeker
+- [ ] **For insurance trade pubs:** Emphasize carrier-by-carrier comparison data and market trends
+- [ ] **For cybersecurity pubs:** Lead with the social engineering sublimit gap and coverage analysis
+- [ ] **For business/SMB pubs:** Focus on the cost data and savings opportunities
+- [ ] **For freelancer pubs:** Highlight the $300–$800/year entry point that most freelancers don't know about
+- [ ] **Timing:** Send Tuesday–Thursday, 9–11 AM in the recipient's time zone
+
+---
+
+## 10. Niche Resource Pitch
+
+> **Purpose:** Pitch new long-tail articles to niche-specific publications where the content directly serves their audience.
+> **Best for:** Freelancer communities, healthcare marketing blogs, cybersecurity education sites, insurance education platforms
+> **Response rate benchmark:** 8–12% (niche relevance compensates for lower brand recognition)
+
+### Target Publications by Niche
+
+| Niche | Publications | Best Article to Pitch |
+|-------|-------------|----------------------|
+| Freelancer/Solopreneur | Freelancers Union Blog, Millo, Contently, The Freelancer Magazine, Indie Hackers | Freelancers & Solo Agencies Guide |
+| Healthcare Marketing | Healthcare Marketing Network, SHSMD, MM+M, Healthcare IT News | HIPAA Agencies Guide |
+| Cybersecurity Education | Dark Reading, SC Magazine Community, SANS Reading Room, Cybersecurity Dive | Social Engineering Coverage Guide |
+| Insurance Education | Insurance Journal, Investopedia (contributor), NerdWallet (contributor), Policygenius Blog | Deductibles Guide |
+| Agency Operations | Search Engine Journal, HubSpot Blog, DesignRush, AgencyAnalytics Blog | All new articles (rotate) |
+
+### Subject Line A/B Test
+
+**Version A:** "Resource for your [NICHE] readers: [SPECIFIC TOPIC]"
+**Version B:** "[SPECIFIC DATA POINT] — thought your audience should know"
+
+### Email Body
+
+```
+Subject: [A/B TEST SUBJECT LINE]
+
+Hi [FIRST NAME],
+
+I've been reading [PUBLICATION NAME] for a while — your recent piece on [SPECIFIC ARTICLE] was particularly [specific observation].
+
+I'm reaching out because we just published a resource that directly addresses a gap I've noticed in [NICHE] coverage: [ARTICLE TITLE].
+
+[CHOOSE THE RELEVANT PARAGRAPH BASED ON THE ARTICLE BEING PITCHED:]
+
+**For Freelancers & Solo Agencies Guide:**
+Most cyber insurance content is written for mid-size companies, leaving freelancers and solo operators with no clear guidance. Our guide covers what's different about freelancer policies — including the fact that coverage starts at just $300/year, which surprises most solo operators who assume it's unaffordable. We break down exactly what freelancers handling client credentials (Google Ads, social media accounts) need to know about third-party liability.
+
+**For Social Engineering Coverage Guide:**
+Social engineering is now the #1 cyber insurance claims category (29–39% of all claims), yet most coverage guides don't address the sublimit problem. Our analysis found that typical policies cap social engineering coverage at $100K–$250K on a $1M policy — and the "voluntary parting" exclusion can void coverage entirely. We compared carrier-by-carrier coverage to help agencies identify the gap before they need to file a claim.
+
+**For HIPAA Agencies Guide:**
+Agencies handling protected health information (PHI) for healthcare clients face unique cyber insurance requirements that generic guides don't cover — BAA mandates, regulatory fines coverage (up to $2.1M per violation category), and the 60-day breach notification requirement. Our guide is the first to address the specific intersection of HIPAA compliance and agency cyber insurance.
+
+**For Deductibles Guide:**
+Cyber insurance deductibles are one of the most misunderstood aspects of agency coverage. Our guide provides specific deductible ranges by agency size, explains per-claim vs. aggregate structures, and shows how choosing the right deductible ($2,500–$5,000 sweet spot for small agencies) can reduce premiums by 15–20%.
+
+Would this be useful as a resource link for your readers, or would you be interested in a guest contribution expanding on the topic for [PUBLICATION NAME]? Happy to adapt the angle to fit your editorial calendar.
+
+Best,
+[YOUR NAME]
+[YOUR TITLE]
+AgencyCyberInsurance.com
+```
+
+### Follow-up Email (7 days later)
+
+```
+Subject: Re: [ORIGINAL SUBJECT LINE]
+
+Hi [FIRST NAME],
+
+Just circling back on the [ARTICLE TOPIC] resource I shared. I know editorial calendars fill up fast, so no pressure.
+
+One additional thought: if a full resource link doesn't fit, I'd also be happy to contribute a shorter expert quote or data point for any upcoming pieces on [NICHE TOPIC]. We have original pricing data across 6 carriers that's hard to find elsewhere.
+
+Either way, keep up the great work on [PUBLICATION NAME] — I'll keep reading.
+
+Best,
+[YOUR NAME]
+```
+
+### Personalization Notes
+
+- [ ] **Only pitch ONE article per email** — don't overwhelm with multiple resources
+- [ ] **Match the article to the publication's audience** — use the niche mapping table above
+- [ ] **Reference a specific recent article** from the publication to prove you're a real reader
+- [ ] **Offer flexibility** — resource link, guest post, or expert quote gives them three ways to say yes
+- [ ] **For freelancer pubs:** Emphasize the affordability angle ($300/year) — their audience assumes insurance is expensive
+- [ ] **For healthcare pubs:** Lead with HIPAA compliance requirements — their audience is compliance-focused
+- [ ] **For cybersecurity pubs:** Lead with the data (sublimits, voluntary parting exclusion) — their audience wants technical depth
+- [ ] **For insurance pubs:** Emphasize the original data and buyer perspective — their audience is industry professionals
+- [ ] **Timing:** Send Tuesday–Thursday, 9–11 AM in the recipient's time zone
+
+---
+
 ## Quick Reference: Data Points for All Templates
 
 Use these verified data points from our published research across all outreach:
@@ -660,8 +827,16 @@ Use these verified data points from our published research across all outreach:
 | Business interruption waiting period: 6–12 hours | What Cyber Insurance Covers |
 | Funds transfer fraud sublimits: $100K–$250K on $1M policy | What Cyber Insurance Covers |
 | Premiums declined 2.1% Q1 2025 | Trends 2025 |
-| Content library: 21 articles, ~126,000 words | Site overview |
+| Content library: 25 articles, ~150,000+ words | Site overview |
 | Providers compared: Coalition, Hiscox, Embroker, Chubb, CFC, At-Bay | Best Providers Compared |
+| Freelancer cyber insurance cost: $300–$800/year | Freelancers & Solo Agencies Guide |
+| Social engineering sublimits: $100K–$250K on $1M policy | Social Engineering Coverage Guide |
+| Voluntary parting exclusion: common in social engineering claims | Social Engineering Coverage Guide |
+| HIPAA breach notification: 60-day requirement | HIPAA Agencies Guide |
+| HIPAA fines: up to $2.1M per violation category | HIPAA Agencies Guide |
+| Deductible sweet spot for small agencies: $2,500–$5,000 | Deductibles Guide |
+| Higher deductible savings: 15–20% premium reduction | Deductibles Guide |
+| Price Index: 6 carriers tracked, updated quarterly | Cyber Insurance Price Index |
 
 ---
 

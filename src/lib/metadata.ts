@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const SITE_URL = "https://agencycyberinsurance.com";
+const SITE_URL = "https://www.agencycyberinsurance.com";
 const SITE_NAME = "AgencyCyberInsurance";
 const SITE_DESCRIPTION =
   "Cyber insurance decoded by the agencies who buy it. Expert cyber liability insurance guidance for digital agencies — compare policies, understand coverage, and protect your agency from cyber threats.";
@@ -16,6 +16,7 @@ export function createMetadata({
   publishedTime,
   modifiedTime,
   tags,
+  noSuffix = false,
 }: {
   title: string;
   description: string;
@@ -25,9 +26,10 @@ export function createMetadata({
   publishedTime?: string;
   modifiedTime?: string;
   tags?: string[];
+  noSuffix?: boolean;
 }): Metadata {
   const url = `${SITE_URL}${path}`;
-  const fullTitle = path === "" ? title : `${title} | ${SITE_NAME}`;
+  const fullTitle = noSuffix || path === "" ? title : `${title} | ${SITE_NAME}`;
 
   return {
     title: fullTitle,
@@ -85,6 +87,7 @@ export function getArticleJsonLd({
   slug,
   date,
   updated,
+  updateLog,
   image,
 }: {
   title: string;
@@ -92,8 +95,14 @@ export function getArticleJsonLd({
   slug: string;
   date: string;
   updated?: string;
+  updateLog?: { date: string; change: string }[];
   image?: string;
 }) {
+  // Use latest update_log date if available, otherwise fall back to updated or date
+  const dateModified = updateLog && updateLog.length > 0
+    ? updateLog[0].date
+    : updated || date;
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -101,7 +110,7 @@ export function getArticleJsonLd({
     description,
     url: `${SITE_URL}/blog/${slug}`,
     datePublished: date,
-    dateModified: updated || date,
+    dateModified,
     image: image || DEFAULT_OG_IMAGE,
     author: {
       "@type": "Organization",

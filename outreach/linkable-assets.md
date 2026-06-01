@@ -496,6 +496,136 @@ Outputs a scored report card (A–F per category) with specific recommendations 
 
 ---
 
+## 7. New Content Assets (June 2026)
+
+Our content library has expanded to **25 articles (~150,000+ words)** plus the **Cyber Insurance Recommendation Engine** and the **Cyber Insurance Price Index** — our most linkable data asset to date.
+
+This section covers five new assets added in June 2026: one original data asset (the Price Index) and four long-tail blog articles targeting underserved keyword niches. Together, they significantly strengthen our outreach arsenal — particularly the Price Index, which becomes our #1 linkable asset.
+
+### New Content Linkability Audit (June 2026)
+
+| Page | Type | Words | Data Originality | Reference Value | Evergreen | Visual/Embed | Outreach Fit | Overall Score |
+|------|------|-------|-----------------|----------------|-----------|-------------|-------------|---------------|
+| Cyber Insurance Price Index | Tool/Data | N/A | ★★★★★ | ★★★★★ | ★★★★☆ | ★★★★★ | ★★★★★ | **A+ — Best Asset** |
+| Freelancers & Solo Agencies | Blog | ~5,000 | ★★★★☆ | ★★★★☆ | ★★★★★ | ★★☆☆☆ | ★★★★☆ | **B+ — Strong** |
+| Social Engineering Coverage | Blog | ~5,500 | ★★★★★ | ★★★★★ | ★★★★☆ | ★★★☆☆ | ★★★★★ | **A — Top Asset** |
+| HIPAA Agencies | Blog | ~4,500 | ★★★★☆ | ★★★★☆ | ★★★★★ | ★★☆☆☆ | ★★★★☆ | **B+ — Strong** |
+| Deductibles Guide | Blog | ~5,000 | ★★★★★ | ★★★★★ | ★★★★☆ | ★★★☆☆ | ★★★★☆ | **A- — Strong** |
+
+*The Price Index is the single most linkable asset in our entire library — original data that no competitor has, updated quarterly, and perfectly suited for journalist citations, HARO responses, and resource page inclusion.*
+
+---
+
+### #0: Cyber Insurance Price Index (NEW #1 ASSET)
+
+**URL:** `https://agencycyberinsurance.com/tools/price-index`
+**Why it's linkable:**
+- **ORIGINAL DATA that doesn't exist anywhere else** — aggregated pricing across 6 carriers by agency size, specialty, and risk tier. No other site publishes independent, structured cyber insurance pricing data for agencies.
+- **Journalists writing about cyber insurance costs NEED a citable source** — this becomes THE source. Every "how much does cyber insurance cost" article needs data, and we're the only ones providing it in a structured, regularly-updated format.
+- **Updated quarterly, giving repeat outreach opportunities.** Each update is a new pitch: "Our Q2 2026 data shows premiums shifted by X%..." — this creates a recurring link acquisition engine.
+- **Pricing tables are screenshot-friendly and embed-friendly.** Bloggers can screenshot a table, journalists can cite a specific number, and researchers can reference the methodology.
+- **Complements the Recommendation Engine** — real data backing the estimates. Together, these two tools create a comprehensive pricing resource that no competitor can match.
+- **Data assets earn 3–5x more links than opinion content** (Ahrefs/BuzzSumo research). This is the highest-leverage asset we can build for link acquisition.
+
+**Best outreach angles:**
+- **HARO/journalist queries:** "According to our Price Index tracking 6 carriers, the average agency pays $1,500–$4,000/year for cyber insurance — but agencies handling HIPAA data pay 40–60% more."
+- **Resource pages:** "Free, regularly-updated cyber insurance pricing data for small businesses and digital agencies."
+- **Guest posts:** "Based on our Price Index data..." as a natural citation within any guest article about cyber insurance costs.
+- **Newsletter features:** "The only independent cyber insurance price tracker for agencies — updated quarterly with data from 6 carriers."
+- **Academic/research citations:** Structured data with transparent methodology that researchers and analysts can reference.
+
+**Target link types:** Data citations, journalist references, resource pages, academic citations, newsletter features
+**Expected links:** 15–25 in first 6 months (data assets have the highest link velocity of any content type)
+
+---
+
+### #6: Cyber Insurance for Freelancers & Solo Agencies
+
+**URL:** `https://agencycyberinsurance.com/blog/cyber-insurance-freelance-solo-agencies`
+**Why it's linkable:**
+- **Specific freelancer pricing data ($300–$800/year)** that freelancer communities will reference — most cyber insurance content ignores the solo operator segment entirely.
+- **Fills a massive content gap** — freelancers searching for cyber insurance information find enterprise-focused content that doesn't apply to them.
+- **Evergreen topic** — freelancer cyber risk isn't going away, and the pricing data remains relevant for 12+ months.
+
+**Best outreach angles:**
+- **Freelancer publications:** "Your readers are handling client credentials daily but most don't know cyber insurance starts at $300/year."
+- **Solopreneur blogs:** "We wrote the definitive guide to cyber insurance for solo operators — covers what's different about freelancer policies."
+- **Community posts:** Natural reference in r/freelance, Freelancers Union forums, and solopreneur Slack groups.
+
+**Target link types:** Freelancer resource pages, solopreneur blogs, community references
+**Expected links:** 5–8 in first 6 months
+
+---
+
+### #7: Does Cyber Insurance Cover Social Engineering?
+
+**URL:** `https://agencycyberinsurance.com/blog/cyber-insurance-social-engineering-coverage`
+**Why it's linkable:**
+- **Definitive answer to one of the most-searched cyber insurance questions** — sublimit analysis ($100K–$250K on $1M policies), voluntary parting exclusion deep dive, and BEC coverage specifics.
+- **Original analysis of carrier-by-carrier coverage differences** — no other resource compares social engineering coverage across major carriers at this level of detail.
+- **Cybersecurity publications need this content** — social engineering is the #1 claims category (29–39% of all claims), and most coverage guides don't address the sublimit problem.
+
+**Best outreach angles:**
+- **Cybersecurity publications:** "Social engineering is the #1 cyber claims category, but most policies sublimit coverage to $100K–$250K. We analyzed the gap."
+- **Insurance blogs:** "The voluntary parting exclusion is voiding social engineering claims — here's what agencies need to know."
+- **Agency publications:** "Your agency's cyber policy probably doesn't fully cover BEC attacks. Here's how to check."
+
+**Target link types:** Cybersecurity resource pages, insurance education sites, agency risk management content
+**Expected links:** 8–12 in first 6 months
+
+---
+
+### #8: Cyber Insurance for Agencies Handling HIPAA Data
+
+**URL:** `https://agencycyberinsurance.com/blog/cyber-insurance-hipaa-agencies`
+**Why it's linkable:**
+- **Niche intersection of HIPAA compliance + agency insurance** that no other resource covers — healthcare marketing agencies need this and can't find it anywhere.
+- **Specific regulatory data** — BAA requirements, PHI coverage specifics, 60-day breach notification requirement, fines up to $2.1M per violation category.
+- **Healthcare marketing blogs will cite this** as the go-to resource for their audience's insurance questions.
+
+**Best outreach angles:**
+- **Healthcare marketing publications:** "If your readers handle PHI for healthcare clients, they need specialized cyber insurance. We wrote the guide."
+- **Compliance blogs:** "HIPAA agencies face unique cyber insurance requirements — BAA mandates, regulatory fines coverage, and PHI-specific endorsements."
+- **Agency publications:** "Agencies handling healthcare data pay 40–60% more for cyber insurance. Here's why and how to optimize coverage."
+
+**Target link types:** Healthcare marketing resource pages, compliance blogs, HIPAA education sites
+**Expected links:** 4–6 in first 6 months
+
+---
+
+### #9: Cyber Insurance Deductibles Guide
+
+**URL:** `https://agencycyberinsurance.com/blog/cyber-insurance-deductibles-guide`
+**Why it's linkable:**
+- **Fills a major content gap** — specific deductible ranges by agency size, per-claim vs. aggregate structures, and savings calculations that no other resource provides.
+- **Actionable data** — the $2,500–$5,000 sweet spot for small agencies and the 15–20% premium savings from higher deductibles give readers concrete numbers to work with.
+- **Comparison tables are screenshot-friendly** — deductible-to-premium impact tables are the kind of visual that bloggers embed and cite.
+
+**Best outreach angles:**
+- **Insurance education sites:** "We published the most detailed cyber insurance deductibles guide available — with specific ranges by agency size and premium impact calculations."
+- **Small business blogs:** "Most agencies overpay for cyber insurance because they don't optimize their deductible. Our guide shows the sweet spot."
+- **Financial planning content:** "Cyber insurance deductible optimization can save agencies 15–20% on premiums. Here's the data."
+
+**Target link types:** Insurance education resource pages, small business financial content, agency operations blogs
+**Expected links:** 5–8 in first 6 months
+
+---
+
+### Updated Link Acquisition Projections
+
+#### 6-Month Projection: New Assets (June 2026)
+
+| Asset | Months 1–2 | Months 3–4 | Months 5–6 | Total (6 mo) |
+|-------|-----------|-----------|-----------|-------------|
+| Cyber Insurance Price Index (NEW) | 3–5 | 5–8 | 7–12 | 15–25 |
+| Social Engineering Coverage (NEW) | 2–3 | 3–4 | 3–5 | 8–12 |
+| Deductibles Guide (NEW) | 1–2 | 2–3 | 2–3 | 5–8 |
+| Freelancers & Solo Agencies (NEW) | 1–2 | 2–3 | 2–3 | 5–8 |
+| HIPAA Agencies (NEW) | 1–2 | 1–2 | 2–2 | 4–6 |
+| **New Assets Subtotal** | **8–14** | **13–20** | **16–25** | **37–59** |
+
+Combined with the existing asset projections (89–124 links from the original analysis), the total 6-month projection is now **126–183 new referring domains** — a significant increase driven primarily by the Price Index data asset.
+
 ## Summary: The Linkable Assets Flywheel
 
 ```

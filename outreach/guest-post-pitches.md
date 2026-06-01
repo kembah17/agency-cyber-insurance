@@ -18,6 +18,8 @@
 8. [5 Security Investments That Pay for Themselves Through Lower Premiums](#8-5-security-investments-that-pay-for-themselves-through-lower-premiums)
 9. [The Digital Agency's Guide to Passing a Cyber Insurance Application](#9-the-digital-agencys-guide-to-passing-a-cyber-insurance-application)
 10. [Why Your Agency's Biggest Cyber Risk Isn't Ransomware](#10-why-your-agencys-biggest-cyber-risk-isnt-ransomware)
+11. [The Real Cost of Going Uninsured: What Freelance Agencies Risk](#11-the-real-cost-of-going-uninsured-what-freelance-agencies-risk)
+12. [Social Engineering Is the #1 Cyber Threat to Agencies — And Most Policies Don't Fully Cover It](#12-social-engineering-is-the-1-cyber-threat-to-agencies--and-most-policies-dont-fully-cover-it)
 
 ---
 
@@ -371,6 +373,74 @@ Link to our guide on whether agencies need cyber insurance (https://agencycyberi
 
 ---
 
+## 11. The Real Cost of Going Uninsured: What Freelance Agencies Risk
+
+**Target publication type:** Freelancer/solopreneur publications (Freelancers Union Blog, Millo, Contently, The Freelancer Magazine, Indie Hackers)
+
+### Pitch Summary
+
+Freelancers face the same cyber risks as larger agencies but without corporate protection. A single data breach can cost $120,000+ in response costs, and without cyber insurance ($300–$800/year), that liability falls entirely on the individual. This piece uses real claims data and freelancer-specific scenarios to make the case for coverage — not through fear, but through a clear-eyed cost comparison that shows the math doesn't work without a policy.
+
+### Key Data Points to Include
+
+- Freelancer cyber insurance: $300–$800/year — less than most freelancers spend on software subscriptions
+- Average data breach response cost: $120,000+ (forensics, notification, legal, credit monitoring)
+- 60% of small businesses close within 6 months of a cyber attack (National Cyber Security Alliance)
+- Freelancers handling client credentials (Google Ads, social media, CMS access) face third-party liability that multiplies exposure
+- Solo operators can't absorb even a $25,000 claim without insurance — that's 3–6 months of revenue for most freelancers
+- Most freelancers qualify for minimum coverage at the lowest premium tier, making the cost-benefit ratio overwhelmingly favorable
+- Client contracts increasingly require proof of cyber insurance — going uninsured limits which clients you can work with
+
+### Natural Backlink Opportunity
+
+Link to our freelancer guide (https://agencycyberinsurance.com/blog/cyber-insurance-freelance-solo-agencies) for the full coverage breakdown, and to our cost guide (https://agencycyberinsurance.com/blog/cyber-insurance-cost-digital-agencies) for detailed pricing data across agency sizes.
+
+### Outline
+
+1. **Introduction: The Freelancer's Blind Spot** — You've got health insurance, liability insurance, maybe even disability insurance. But the asset you depend on most — your digital infrastructure and client data — is completely unprotected.
+2. **The Threat Landscape for Solo Operators** — Freelancers face the same phishing, BEC, and account takeover attacks as agencies with 50 employees. The difference: there's no IT department, no incident response team, and no corporate insurance policy to fall back on.
+3. **Real-World Scenarios: What a Breach Looks Like for a Freelancer** — Three scenarios: compromised client social media account, ransomware on a laptop with client files, and BEC resulting in a misdirected client payment.
+4. **The Math: $300/Year vs. $120,000 in Breach Costs** — A straightforward cost comparison showing that even the cheapest policy covers more than a freelancer could self-fund in a decade of savings.
+5. **What Freelancer Cyber Insurance Actually Covers** — First-party costs (forensics, data recovery, business interruption), third-party liability (client lawsuits, regulatory fines), and crisis management (breach notification, credit monitoring).
+6. **How to Get Covered: The Freelancer Application Process** — What carriers look for, minimum security requirements (MFA, backups, updated software), and which providers offer the best rates for solo operators.
+7. **Action Steps: Protecting Your Freelance Business This Week** — Enable MFA everywhere, set up automated backups, get a quote (takes 15 minutes), and update client contracts to reflect your coverage.
+
+---
+
+## 12. Social Engineering Is the #1 Cyber Threat to Agencies — And Most Policies Don't Fully Cover It
+
+**Target publication type:** Cybersecurity publications (Dark Reading, SC Magazine, CSO Online) and agency publications (Search Engine Journal, HubSpot Blog, DesignRush)
+
+### Pitch Summary
+
+Social engineering and BEC attacks account for 29–39% of all cyber insurance claims — more than ransomware, more than data breaches, more than any other category. But most cyber insurance policies sublimit social engineering coverage to $100K–$250K on a $1M policy, and the "voluntary parting" exclusion can void coverage entirely if an employee willingly transfers funds based on a fraudulent request. This piece exposes the coverage gap using claims data and carrier comparisons, and explains how agencies can negotiate better terms before their next renewal.
+
+### Key Data Points to Include
+
+- Social engineering: 29–39% of all cyber claims — the #1 category, ahead of ransomware and data breaches
+- Typical sublimit: $100K–$250K on a $1M policy — meaning 75–90% of your policy limit doesn't apply to the most likely claim
+- Voluntary parting exclusion: can void the entire social engineering claim if the insured "voluntarily" transferred funds, even under fraudulent pretenses
+- Average BEC loss: $125,000+ per incident (FBI IC3 data)
+- Agencies are prime targets due to fast-paced culture, frequent vendor payments, and the "urgent request" norm that social engineers exploit
+- Only 3 of 6 major carriers offer full-limit social engineering coverage — most agencies don't know which tier their policy falls into
+- The gap between what agencies think they're covered for and what they're actually covered for is often $750K+ on a $1M policy
+
+### Natural Backlink Opportunity
+
+Link to our social engineering coverage guide (https://agencycyberinsurance.com/blog/cyber-insurance-social-engineering-coverage) for the full carrier-by-carrier analysis, and to our claims guide (https://agencycyberinsurance.com/blog/how-to-file-cyber-insurance-claim) for the step-by-step process when a social engineering attack succeeds.
+
+### Outline
+
+1. **Introduction: The Threat No One's Talking About** — Ransomware dominates headlines, but social engineering dominates claims. Here's why the disconnect matters for your agency's coverage.
+2. **The Numbers: Social Engineering by the Data** — Claims frequency breakdown showing social engineering at 29–39% of all cyber claims. Comparison with ransomware, data breaches, and other categories.
+3. **The Coverage Gap: Sublimits and Exclusions** — How most policies cap social engineering at $100K–$250K on a $1M policy, and why the voluntary parting exclusion is the most dangerous clause in your policy.
+4. **The Voluntary Parting Problem Explained** — What "voluntary parting" means in insurance law, how it applies to BEC attacks, and why an employee following a fraudulent wire transfer instruction can void your coverage.
+5. **Carrier Comparison: Who Actually Covers Social Engineering?** — Analysis of 6 major carriers' social engineering coverage, sublimits, and exclusion language. Only 3 offer full-limit coverage.
+6. **How to Negotiate Better Social Engineering Coverage** — Specific endorsements to request, questions to ask your broker, and renewal strategies that can eliminate or raise sublimits.
+7. **Prevention + Protection: A Two-Layer Defense** — Technical controls (email authentication, payment verification procedures) combined with insurance optimization to create comprehensive protection against social engineering.
+
+---
+
 ## Quick Reference: Pitch Matching Guide
 
 | Topic # | Best for Agency Blogs | Best for Cybersec Pubs | Best for Insurance Pubs | Best for Business Pubs |
@@ -385,6 +455,8 @@ Link to our guide on whether agencies need cyber insurance (https://agencycyberi
 | 8 | ✅ Primary | | | ✅ Secondary |
 | 9 | ✅ Primary | | ✅ Secondary | |
 | 10 | ✅ Secondary | ✅ Primary | | |
+| 11 | | | | ✅ Primary |
+| 12 | ✅ Secondary | ✅ Primary | | |
 
 ---
 
@@ -394,9 +466,10 @@ Link to our guide on whether agencies need cyber insurance (https://agencycyberi
 **Month 2:** Pitch topics 1, 4, and 5 (contract liability, funds transfer fraud, market trends)
 **Month 3:** Pitch topics 7, 8, and 9 (claims walkthrough, ROI investments, application guide)
 **Month 4:** Pitch topic 2 to remaining publications; repitch rejected topics to new targets
+**Month 5:** Pitch topics 11 and 12 (freelancer risk, social engineering coverage gap — leveraging new long-tail content and Price Index data)
 
 **Rule:** Never pitch the same topic to competing publications simultaneously. Wait for rejection or 14 days of silence before pitching elsewhere.
 
 ---
 
-*All topics are based on original research published across 21 articles (~126,000 words) on AgencyCyberInsurance.com. Data points are sourced from real carrier applications, published claims data, and direct buyer experience.*
+*All topics are based on original research published across 25 articles (~150,000+ words) on AgencyCyberInsurance.com. Data points are sourced from real carrier applications, published claims data, and direct buyer experience.*
